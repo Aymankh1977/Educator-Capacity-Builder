@@ -7,6 +7,28 @@ export const maxDuration = 60;
 const MODEL_FAST = process.env.MODEL_FAST || "claude-haiku-4-5-20251001";
 const MODEL_COACH = process.env.MODEL_COACH || "claude-sonnet-5";
 
+// Per-IP rate limit. In-memory, so it applies per serverless instance: a guard against abuse, not a billing cap.
+const WINDOW_MS = 10 * 60 * 1000;
+const LIMIT = Number(process.env.RATE_LIMIT || 20);
+const hits = new Map();
+
+function clientIp(req) {
+  return (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || req.headers.get("x-real-ip") || "unknown";
+}
+
+function rateLimited(ip) {
+  const now = Date.now();
+  const recent = (hits.get(ip) || []).filter((t) => now - t < WINDOW_MS);
+  if (recent.length >= LIMIT) {
+    hits.set(ip, recent);
+    return true;
+  }
+  recent.push(now);
+  hits.set(ip, recent);
+  if (hits.size > 5000) hits.clear();
+  return false;
+}
+
 function accessOk(req) {
   const codes = (process.env.ACCESS_CODES || "").split(",").map((s) => s.trim()).filter(Boolean);
   if (codes.length === 0) return true;
@@ -49,6 +71,10 @@ Give coaching feedback: acknowledge what is sound in the reflection, name one ri
 }
 
 export async function POST(req) {
+  // Rate limit first, so repeated wrong access codes are throttled too.
+  if (rateLimited(clientIp(req))) {
+    return Response.json({ error: "rate_limited" }, { status: 429, headers: { "Retry-After": "600" } });
+  }
   if (!accessOk(req)) return Response.json({ error: "access" }, { status: 401 });
   if (!process.env.ANTHROPIC_API_KEY) return Response.json({ error: "config" }, { status: 500 });
 

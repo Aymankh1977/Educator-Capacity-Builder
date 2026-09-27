@@ -10,6 +10,7 @@ export default function Shell({ children }) {
     ["/", t.navHome],
     ["/readiness", t.navReadiness],
     ["/scenarios", t.navScenarios],
+    ["/journal", t.navJournal],
   ];
   return (
     <>

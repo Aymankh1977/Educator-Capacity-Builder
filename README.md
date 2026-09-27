@@ -5,6 +5,8 @@ AI capacity building for dental educators, built on the REAL-AI framework
 
 MVP modules: **Readiness Check** (16 items, per-pillar profile, AI development plan via Haiku)
 and **Scenario Studio** (4 dental scenarios, one per pillar, AI coaching debrief via Sonnet). EN/AR with RTL.
+**My record** keeps plans and scenario reflections in the browser, printable as a CPD record.
+In scenarios, the REAL-AI fit rating is revealed only after the educator submits a reflection.
 
 ## Run locally
 ```bash
@@ -17,7 +19,7 @@ npm run dev                  # http://localhost:3000
 1. Push this folder to a new GitHub repo (e.g. `Aymankh1977/realai-educator-studio`).
 2. In Vercel: **Add New → Project → Import** the repo. Framework is detected as Next.js.
 3. Add environment variables: `ANTHROPIC_API_KEY` (required), `ACCESS_CODES` (optional, comma-separated),
-   `MODEL_FAST` / `MODEL_COACH` (optional overrides).
+   `RATE_LIMIT` (optional, AI requests per IP per 10 minutes, default 20), `MODEL_FAST` / `MODEL_COACH` (optional overrides).
 4. Deploy. Every push to `main` redeploys automatically.
 
 ## Where to edit

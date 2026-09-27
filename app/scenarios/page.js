@@ -1,22 +1,38 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useLang } from "@/components/LangProvider";
 import CoachBox from "@/components/CoachBox";
 import { SCENARIOS, pillarByKey } from "@/lib/realai";
+import { addEntry, updateEntry } from "@/lib/journal";
 
+// Flow: choose a response → write a reflection → then see the REAL-AI fit rating and optional coaching.
+// The rating stays hidden until the reflection is submitted, so the reflection records the educator's own reasoning.
 export default function Scenarios() {
   const { lang, t } = useLang();
   const [activeId, setActiveId] = useState(null);
   const [choice, setChoice] = useState(null);
   const [reflection, setReflection] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const entryId = useRef(null);
 
   const sc = SCENARIOS.find((s) => s.id === activeId);
 
-  function open(id) {
-    setActiveId(id);
+  function reset() {
     setChoice(null);
     setReflection("");
+    setSubmitted(false);
+    entryId.current = null;
+  }
+
+  function open(id) {
+    setActiveId(id);
+    reset();
     window.scrollTo({ top: 0 });
+  }
+
+  function submit() {
+    entryId.current = addEntry({ kind: "reflection", scenarioId: sc.id, optionId: choice, reflection: reflection.trim(), lang });
+    setSubmitted(true);
   }
 
   if (!sc) {
@@ -60,34 +76,47 @@ export default function Scenarios() {
             key={o.id}
             role="radio"
             aria-checked={choice === o.id}
-            className={`option ${choice === o.id ? `chosen fit-${o.fit}` : ""}`}
+            className={`option ${choice === o.id ? "chosen" : ""} ${submitted && choice === o.id ? `fit-${o.fit}` : ""}`}
             onClick={() => setChoice(o.id)}
-            disabled={Boolean(choice) && choice !== o.id}
+            disabled={submitted && choice !== o.id}
           >
             {o.text[lang]}
           </button>
         ))}
       </div>
 
-      {opt && (
-        <div className={`verdict fit-${opt.fit}`} aria-live="polite">
-          <strong>{t.fit[opt.fit]}</strong>
-          <p>{opt.feedback[lang]}</p>
-          <button className="linkish" onClick={() => setChoice(null)}>{t.tryAnother}</button>
-        </div>
-      )}
-
-      {opt && (
+      {opt && !submitted && (
         <div className="reflect">
           <label htmlFor="reflection">{t.reflectPrompt}</label>
           <textarea id="reflection" rows={4} maxLength={1500} value={reflection} onChange={(e) => setReflection(e.target.value)} />
-          <CoachBox
-            key={`${sc.id}-${opt.id}`}
-            buttonLabel={t.getDebrief}
-            disabled={reflection.trim().length < 10}
-            buildRequest={() => ({ mode: "debrief", scenarioId: sc.id, optionId: opt.id, reflection })}
-          />
+          <p className="note">{t.revealNote}</p>
+          <div>
+            <button className="btn" onClick={submit} disabled={reflection.trim().length < 10}>{t.submitReflection}</button>
+          </div>
         </div>
+      )}
+
+      {opt && submitted && (
+        <>
+          <div className="my-reflection">
+            <span>{t.yourReflection}</span>
+            <p>{reflection.trim()}</p>
+          </div>
+
+          <div className={`verdict fit-${opt.fit}`} aria-live="polite">
+            <strong>{t.fit[opt.fit]}</strong>
+            <p>{opt.feedback[lang]}</p>
+          </div>
+
+          <CoachBox
+            key={`${sc.id}-${opt.id}-${entryId.current}`}
+            buttonLabel={t.getDebrief}
+            buildRequest={() => ({ mode: "debrief", scenarioId: sc.id, optionId: opt.id, reflection })}
+            onResult={(text) => entryId.current && updateEntry(entryId.current, { text })}
+          />
+
+          <button className="linkish" onClick={reset}>{t.tryAnother}</button>
+        </>
       )}
     </section>
   );

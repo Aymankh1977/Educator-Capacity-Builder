@@ -1,14 +1,17 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { useLang } from "./LangProvider";
 
 // Sends a request to /api/coach and shows the reply. Asks for an access code if the server requires one.
-export default function CoachBox({ buildRequest, buttonLabel, disabled }) {
+// onResult(text) lets the page save the reply to "My record".
+export default function CoachBox({ buildRequest, buttonLabel, disabled, onResult }) {
   const { lang, t } = useLang();
-  const [state, setState] = useState("idle"); // idle | loading | done | code | error
+  const [state, setState] = useState("idle"); // idle | loading | done | code | error | limited
   const [text, setText] = useState("");
   const [code, setCode] = useState("");
   const [codeError, setCodeError] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   async function run(codeOverride) {
     setState("loading");
@@ -25,10 +28,15 @@ export default function CoachBox({ buildRequest, buttonLabel, disabled }) {
         setState("code");
         return;
       }
+      if (res.status === 429) {
+        setState("limited");
+        return;
+      }
       const data = await res.json();
       if (!res.ok || !data.text) throw new Error(data.error || "error");
       setText(data.text);
       setState("done");
+      onResult?.(data.text);
     } catch {
       setState("error");
     }
@@ -42,9 +50,17 @@ export default function CoachBox({ buildRequest, buttonLabel, disabled }) {
     run(c);
   }
 
+  async function copyText() {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {}
+  }
+
   return (
     <div className="coach">
-      {state !== "code" && (
+      {state !== "code" && state !== "done" && (
         <button className="btn" onClick={() => run()} disabled={disabled || state === "loading"}>
           {state === "loading" ? t.coachLoading : buttonLabel}
         </button>
@@ -63,11 +79,18 @@ export default function CoachBox({ buildRequest, buttonLabel, disabled }) {
       )}
 
       {state === "error" && <p className="err" role="alert">{t.coachError}</p>}
+      {state === "limited" && <p className="err" role="alert">{t.rateLimited}</p>}
 
       {state === "done" && (
-        <div className="coach-reply" aria-live="polite">
-          {text.split(/\n+/).filter(Boolean).map((para, i) => <p key={i}>{para}</p>)}
-        </div>
+        <>
+          <div className="coach-reply" aria-live="polite">
+            {text.split(/\n+/).filter(Boolean).map((para, i) => <p key={i}>{para}</p>)}
+          </div>
+          <div className="coach-tools no-print">
+            <button className="linkish" onClick={copyText}>{copied ? t.copied : t.copy}</button>
+            {onResult && <Link href="/journal">{t.savedToRecord}</Link>}
+          </div>
+        </>
       )}
     </div>
   );

@@ -4,13 +4,19 @@ import { STRINGS } from "@/lib/i18n";
 
 const LangContext = createContext({ lang: "en", t: STRINGS.en, setLang: () => {} });
 
-export function LangProvider({ children }) {
-  const [lang, setLangState] = useState("en");
+function writeCookie(l) {
+  document.cookie = `realai_lang=${l}; path=/; max-age=31536000; samesite=lax`;
+}
 
+// The server reads the realai_lang cookie and renders the right language and direction from the first paint.
+export function LangProvider({ initialLang = "en", children }) {
+  const [lang, setLangState] = useState(initialLang);
+
+  // One-time migration for visitors who chose Arabic before the cookie existed.
   useEffect(() => {
+    if (document.cookie.includes("realai_lang=")) return;
     try {
-      const saved = localStorage.getItem("realai_lang");
-      if (saved === "ar" || saved === "en") setLangState(saved);
+      if (localStorage.getItem("realai_lang") === "ar") setLang("ar");
     } catch {}
   }, []);
 
@@ -21,7 +27,7 @@ export function LangProvider({ children }) {
 
   const setLang = (l) => {
     setLangState(l);
-    try { localStorage.setItem("realai_lang", l); } catch {}
+    writeCookie(l);
   };
 
   return <LangContext.Provider value={{ lang, t: STRINGS[lang], setLang }}>{children}</LangContext.Provider>;

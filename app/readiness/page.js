@@ -4,6 +4,7 @@ import { useLang } from "@/components/LangProvider";
 import RealMark from "@/components/RealMark";
 import CoachBox from "@/components/CoachBox";
 import { ITEMS, PILLARS, pillarMeans, toPct } from "@/lib/realai";
+import { addEntry } from "@/lib/journal";
 
 const KEY = "realai_readiness";
 
@@ -36,6 +37,8 @@ export default function Readiness() {
     const id = setTimeout(() => setFills(Object.fromEntries(PILLARS.map((p) => [p.key, toPct(means[p.key])]))), 120);
     return () => clearTimeout(id);
   }, [showProfile, means]);
+
+  const roundedMeans = () => Object.fromEntries(PILLARS.map((p) => [p.key, Number(means[p.key].toFixed(2))]));
 
   function downloadCsv() {
     const header = ["participant", "timestamp", "lang", ...PILLARS.map((p) => `mean_${p.key}`), ...ITEMS.map((i) => i.id)];
@@ -77,7 +80,8 @@ export default function Readiness() {
 
         <CoachBox
           buttonLabel={t.getPlan}
-          buildRequest={() => ({ mode: "plan", scores: Object.fromEntries(PILLARS.map((p) => [p.key, Number(means[p.key].toFixed(2))])) })}
+          buildRequest={() => ({ mode: "plan", scores: roundedMeans() })}
+          onResult={(text) => addEntry({ kind: "plan", scores: roundedMeans(), text, lang })}
         />
 
         <div className="research">

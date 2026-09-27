@@ -1,4 +1,5 @@
 import "./globals.css";
+import { cookies } from "next/headers";
 import { LangProvider } from "@/components/LangProvider";
 import Shell from "@/components/Shell";
 
@@ -9,9 +10,12 @@ export const metadata = {
 
 export const viewport = { width: "device-width", initialScale: 1 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const cookieStore = await cookies();
+  const lang = cookieStore.get("realai_lang")?.value === "ar" ? "ar" : "en";
+
   return (
-    <html lang="en" dir="ltr">
+    <html lang={lang} dir={lang === "ar" ? "rtl" : "ltr"}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -21,7 +25,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <LangProvider>
+        <LangProvider initialLang={lang}>
           <Shell>{children}</Shell>
         </LangProvider>
       </body>
