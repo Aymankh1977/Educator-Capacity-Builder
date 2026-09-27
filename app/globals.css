@@ -166,7 +166,7 @@ textarea { resize: vertical; }
 }
 .option:hover:not(:disabled) { border-color: var(--ink); }
 .option:disabled { opacity: 0.45; cursor: default; }
-.option.chosen { border-width: 2px; }
+.option.chosen { border-width: 2px; border-color: var(--ink); }
 .option.fit-strong { border-color: var(--strong); }
 .option.fit-partial { border-color: var(--partial); }
 .option.fit-weak { border-color: var(--weak); }
