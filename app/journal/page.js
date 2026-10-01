@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useLang } from "@/components/LangProvider";
 import { loadJournal, clearJournal } from "@/lib/journal";
-import { PILLARS, SCENARIOS, pillarByKey } from "@/lib/realai";
+import { PILLARS, IC_PILLARS, SCENARIOS, pillarByKey } from "@/lib/realai";
 
 function Paragraphs({ text }) {
   return text.split(/\n+/).filter(Boolean).map((para, i) => <p key={i}>{para}</p>);
@@ -54,6 +54,22 @@ export default function Journal() {
                     </div>
                   ))}
                 </dl>
+                {e.institutional && (
+                  <dl className="entry-scores">
+                    {IC_PILLARS.map((p) => (
+                      <div key={p.id} style={{ "--c": p.color }}>
+                        <dt>{t.institutionalResultTitle}: {p.name[lang]}</dt>
+                        <dd dir="ltr">{e.institutional[p.id]?.toFixed(1)}</dd>
+                      </div>
+                    ))}
+                    {e.decoupling && (
+                      <div style={{ "--c": "#56676b" }}>
+                        <dt>{t.decouplingTitle}</dt>
+                        <dd dir="ltr">{e.decoupling}</dd>
+                      </div>
+                    )}
+                  </dl>
+                )}
                 <div className="entry-text" lang={e.lang} dir={e.lang === "ar" ? "rtl" : "ltr"}>
                   <Paragraphs text={e.text} />
                 </div>

@@ -1,5 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
-import { PILLARS, SCENARIOS, pillarByKey } from "@/lib/realai";
+import { PILLARS, IC_PILLARS, DECOUPLING_ITEM, SCENARIOS, pillarByKey } from "@/lib/realai";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -47,15 +47,25 @@ Be warm, direct and practical. Ground every suggestion in dental education (clin
 Do not grade or judge the educator as a person. Do not invent regulations or cite specific standard numbers.`;
 }
 
-function planPrompt(scores) {
-  const lines = PILLARS.map((p) => `${p.name.en}: ${scores[p.key].toFixed(1)} / 5`).join("\n");
-  return `An educator completed the REAL-AI readiness check. Mean self-rating per pillar (1 = strongly disagree, 5 = strongly agree):
-${lines}
+// Plan prompt (v3 brief, Section 8.5): both profiles plus the decoupling probe, kept separate.
+function planPrompt(practice, institutional, decoupling) {
+  const p = PILLARS.map((x) => `${x.name.en}: ${practice[x.key].toFixed(1)} / 5`).join("\n");
+  const i = IC_PILLARS.map((x) => `${x.name.en}: ${institutional[x.id].toFixed(1)} / 5`).join("\n");
+  return `An educator completed the REAL-AI capacity profile, a draft self-report instrument that has not been validated. Mean self-ratings (1 = strongly disagree, 5 = strongly agree):
 
-Write a development plan:
-First, one or two sentences reading the profile as a whole.
-Then exactly three actions, prioritising the lowest-rated pillars. Start each action on a new line with the pillar name followed by a colon. Each action must be concrete and doable within one month in a dental school.
-Stay under 200 words.`;
+Practice (REAL-AI pillars):
+${p}
+
+Institutional conditions (Scott's regulative, normative and cultural-cognitive pillars; reverse-scored items already rescored):
+${i}
+
+Single item, reported separately: "${DECOUPLING_ITEM.text.en}" ${decoupling} / 5
+
+Write:
+1. A two-sentence reading of both profiles together.
+2. Two actions within the educator's own control, prioritising the lowest-rated practice pillars. Start each on a new line with the pillar name followed by a colon. Each action must be concrete and doable within one month in a dental school.
+3. One institutional condition worth raising with colleagues or leads, prioritising the lowest-rated institutional pillar. Start it on a new line with a short label meaning "To raise with colleagues", followed by a colon.
+These are self-ratings, not a measure of competence: do not describe levels, targets or achievement. Stay under 220 words.`;
 }
 
 function debriefPrompt(sc, opt, reflection) {
@@ -88,11 +98,16 @@ export async function POST(req) {
 
   let model, prompt;
   if (body.mode === "plan") {
-    const s = body.scores || {};
-    const valid = PILLARS.every((p) => typeof s[p.key] === "number" && s[p.key] >= 1 && s[p.key] <= 5);
+    const practice = body.practice || {};
+    const institutional = body.institutional || {};
+    const inRange = (v) => typeof v === "number" && v >= 1 && v <= 5;
+    const valid =
+      PILLARS.every((p) => inRange(practice[p.key])) &&
+      IC_PILLARS.every((p) => inRange(institutional[p.id])) &&
+      inRange(body.decoupling);
     if (!valid) return Response.json({ error: "bad_request" }, { status: 400 });
     model = MODEL_FAST;
-    prompt = planPrompt(s);
+    prompt = planPrompt(practice, institutional, body.decoupling);
   } else if (body.mode === "debrief") {
     const sc = SCENARIOS.find((x) => x.id === body.scenarioId);
     const opt = sc?.options.find((o) => o.id === body.optionId);
