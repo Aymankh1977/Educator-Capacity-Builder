@@ -312,6 +312,12 @@ select { font: inherit; width: 100%; padding: 10px 12px; border: 1.5px solid var
 .verify { color: var(--partial); font-size: 0.85rem; }
 @media (max-width: 760px) { .cmap { grid-template-columns: 1fr; } .cmap-arrow { transform: rotate(90deg); } .toc ol { columns: 1; } }
 
+/* v3: home */
+.accreditation-link { margin: 14px 0 0; font-weight: 500; }
+.steps h2 { margin: 3px 0 0; }
+.steps h2 a { text-decoration: none; }
+.steps h2 a:hover { text-decoration: underline; }
+
 @media print {
   .topbar, .footer, .no-print { display: none !important; }
   body { background: #fff; font-size: 11pt; }

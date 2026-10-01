@@ -37,17 +37,13 @@ export default function Home() {
             </div>
           </div>
         ))}
+        <p className="accreditation-link"><Link href="/accreditation">{t.accreditationLink}</Link></p>
       </section>
 
       <ol className="steps">
-        <li>
-          <h2>{t.step1Title}</h2>
-          <p>{t.step1Body}</p>
-        </li>
-        <li>
-          <h2>{t.step2Title}</h2>
-          <p>{t.step2Body}</p>
-        </li>
+        <li><h2><Link href="/readiness">{t.step1Title}</Link></h2></li>
+        <li><h2><Link href="/scenarios">{t.step2Title}</Link></h2></li>
+        <li><h2><Link href="/journal">{t.step3Title}</Link></h2></li>
       </ol>
     </>
   );
