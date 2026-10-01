@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "research:docs": "node scripts/research-docs.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",

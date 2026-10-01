@@ -3,10 +3,16 @@
 AI capacity building for dental educators, built on the REAL-AI framework
 (Reflective Integration, Equity by Design, Authentic Clinical Alignment, Learning-Centred Partnership).
 
-MVP modules: **Readiness Check** (16 items, per-pillar profile, AI development plan via Haiku)
-and **Scenario Studio** (4 dental scenarios, one per pillar, AI coaching debrief via Sonnet). EN/AR with RTL.
-**My record** keeps plans and scenario reflections in the browser, printable as a CPD record.
-In scenarios, the REAL-AI fit rating is revealed only after the educator submits a reflection.
+**Iteration 0 (v3): a conjectural prototype in a design-based research programme.** All instruments, scenarios and design principles are unvalidated drafts.
+
+Modules:
+- **Capacity profile:** two separate draft instruments: practice (16 REAL-AI items) and institutional conditions (Scott's three pillars, plus a decoupling probe), with an AI development plan via Haiku. No combined score.
+- **Scenarios:** seven evidence-anchored dilemmas in two groups. The REAL-AI fit rating is revealed only after the educator submits a reflection; coaching debrief via Sonnet.
+- **Practice log:** practice changes (Planned → Enacted → Reviewed), development plans and scenario reflections, kept in the browser and printable as a personal development record (not accreditation evidence).
+- **Accreditation:** how the REAL-AI pillars relate to accreditation themes.
+- **Design rationale** (`/rationale`, footer link): for supervisors, examiners and collaborators.
+
+EN/AR with RTL. All Arabic is a draft translation that needs human review.
 
 ## Run locally
 ```bash
@@ -23,11 +29,13 @@ npm run dev                  # http://localhost:3000
 4. Deploy. Every push to `main` redeploys automatically.
 
 ## Where to edit
-- `lib/realai.js`: pillar wording, readiness items, scenarios. Align pillar descriptions with the published REAL-AI paper.
+- `content/*.json`: all framework content (pillars, both instruments, scenarios, design principles, accreditation and rationale text), each object with `version`, `status` and `provenance`. Record every change in `content/CHANGELOG.md`.
 - `lib/i18n.js`: interface text (EN/AR).
 - `app/api/coach/route.js`: prompts and model choice. The API key never reaches the browser.
+- `research/`: design documentation. After changing `content/`, run `npm run research:docs` to regenerate the generated files.
 
 ## Data and ethics
-No responses are stored server-side. Readiness answers stay in the browser (localStorage);
-only the four pillar means, or a scenario reflection, are sent to the Anthropic API for coaching.
-The CSV export (with optional participant code) supports pre/post comparison for research use under the approved ethics protocol.
+No responses are stored server-side. Answers, reflections and the practice log stay in the browser (localStorage).
+Only the pillar means and the decoupling rating, or a scenario reflection, are sent to the Anthropic API for coaching.
+The CSV export (with optional participant code) is for research use only under an approved ethics protocol.
+Platform-based research data collection is designed in `research/ethics-and-data.md` but not implemented.

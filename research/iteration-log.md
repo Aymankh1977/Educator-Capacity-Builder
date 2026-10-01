@@ -18,6 +18,7 @@ Each entry records what changed in the design, why, and any evidence for or agai
 - **A6 Practice log.** "My record" became the practice log, with a new practice-change entry (intention → enactment → consequence → evidence type) and status Planned → Enacted → Reviewed. No certificates, badges, completion percentages or evidence packs. The printout is headed "Personal development record — not accreditation evidence."
 - **A7 Reflexive coach.** The system prompt now states that the coach is an AI system, limits its claims to what the evidence supports and separates individual action from institutional conditions. Every reply shows the model name and a "How useful was this?" rating, stored with the entry.
 - **A8 Design rationale page.** New English-only `/rationale` page for supervisors, examiners and research collaborators, linked from the footer.
+- **A9 Research documentation.** New `research/` folder: conjecture map, design requirements, design principles, instrument codebook and citation register (generated from `content/` by `npm run research:docs`), this iteration log, and the Part B ethics and data design (`ethics-and-data.md`, design only; no server-side storage).
 
 ### Evidence on the conjectures
 
