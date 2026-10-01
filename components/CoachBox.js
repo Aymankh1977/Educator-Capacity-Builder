@@ -2,16 +2,25 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useLang } from "./LangProvider";
+import { updateEntry } from "@/lib/journal";
+
+const RATINGS = ["useful", "partly", "not_useful"];
 
 // Sends a request to /api/coach and shows the reply. Asks for an access code if the server requires one.
-// onResult(text) lets the page save the reply to "My record".
+// onResult(text, model) lets the page save the reply to the practice log; it returns the entry id,
+// which is where the "How useful was this?" rating is stored (future research data on mediating process M3).
 export default function CoachBox({ buildRequest, buttonLabel, disabled, onResult }) {
   const { lang, t } = useLang();
   const [state, setState] = useState("idle"); // idle | loading | done | code | error | limited
   const [text, setText] = useState("");
+  const [model, setModel] = useState("");
+  const [entryId, setEntryId] = useState(null);
   const [code, setCode] = useState("");
   const [codeError, setCodeError] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [rating, setRating] = useState("");
+  const [why, setWhy] = useState("");
+  const [rated, setRated] = useState(false);
 
   async function run(codeOverride) {
     setState("loading");
@@ -35,8 +44,10 @@ export default function CoachBox({ buildRequest, buttonLabel, disabled, onResult
       const data = await res.json();
       if (!res.ok || !data.text) throw new Error(data.error || "error");
       setText(data.text);
+      setModel(data.model || "");
       setState("done");
-      onResult?.(data.text);
+      const id = onResult?.(data.text, data.model || "");
+      if (id) setEntryId(id);
     } catch {
       setState("error");
     }
@@ -56,6 +67,12 @@ export default function CoachBox({ buildRequest, buttonLabel, disabled, onResult
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {}
+  }
+
+  function saveRating() {
+    if (!rating || !entryId) return;
+    updateEntry(entryId, { rating: { value: rating, why: why.trim().slice(0, 140), ts: new Date().toISOString() } });
+    setRated(true);
   }
 
   return (
@@ -83,6 +100,7 @@ export default function CoachBox({ buildRequest, buttonLabel, disabled, onResult
 
       {state === "done" && (
         <>
+          <p className="ai-disclosure">{t.aiDisclosure(model || t.modelNotRecorded)}</p>
           <div className="coach-reply" aria-live="polite">
             {text.split(/\n+/).filter(Boolean).map((para, i) => <p key={i}>{para}</p>)}
           </div>
@@ -90,6 +108,28 @@ export default function CoachBox({ buildRequest, buttonLabel, disabled, onResult
             <button className="linkish" onClick={copyText}>{copied ? t.copied : t.copy}</button>
             {onResult && <Link href="/journal">{t.savedToRecord}</Link>}
           </div>
+          {entryId && (rated ? (
+            <p className="note no-print">{t.ratingSaved}</p>
+          ) : (
+            <fieldset className="rating no-print">
+              <legend>{t.usefulQ}</legend>
+              <div className="rating-options">
+                {RATINGS.map((r) => (
+                  <label key={r} className={rating === r ? "on" : ""}>
+                    <input type="radio" name={`rating-${entryId}`} checked={rating === r} onChange={() => setRating(r)} />
+                    {t.ratingLabel[r]}
+                  </label>
+                ))}
+              </div>
+              <label className="field">
+                <span>{t.ratingWhy}</span>
+                <input value={why} onChange={(e) => setWhy(e.target.value)} maxLength={140} />
+              </label>
+              <div>
+                <button className="btn btn-quiet" disabled={!rating} onClick={saveRating}>{t.saveRating}</button>
+              </div>
+            </fieldset>
+          ))}
         </>
       )}
     </div>

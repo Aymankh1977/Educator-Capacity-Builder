@@ -275,6 +275,16 @@ select { font: inherit; width: 100%; padding: 10px 12px; border: 1.5px solid var
 .evidence-options input { width: auto; }
 .print-only { display: none; }
 
+/* v3: reflexive coach */
+.ai-disclosure { font-size: 0.85rem; color: var(--muted); margin: 16px 0 -8px; padding-inline-start: 2px; }
+.entry .ai-disclosure { margin: 4px 0 8px; }
+.rating { border: 1px solid var(--rule); border-radius: 8px; padding: 12px 16px; margin: 14px 0 0; display: grid; gap: 10px; }
+.rating legend { padding: 0 4px; font-size: 0.92rem; }
+.rating-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.rating-options label { display: inline-flex; align-items: center; gap: 6px; border: 1.5px solid var(--rule); border-radius: 999px; padding: 4px 12px; cursor: pointer; background: var(--surface); }
+.rating-options label.on { border-color: var(--ink); font-weight: 700; }
+.rating-options input { width: auto; margin: 0; }
+
 @media print {
   .topbar, .footer, .no-print { display: none !important; }
   body { background: #fff; font-size: 11pt; }

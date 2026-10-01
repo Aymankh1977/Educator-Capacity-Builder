@@ -44,7 +44,13 @@ ${FRAMEWORK}
 
 Write in ${language}. Use plain text only: no markdown, no asterisks, no headings, no bullet symbols. Separate ideas with short paragraphs.
 Be warm, direct and practical. Ground every suggestion in dental education (clinics, BDS modules, OSCEs, case reports, supervision).
-Do not grade or judge the educator as a person. Do not invent regulations or cite specific standard numbers.`;
+Do not grade or judge the educator as a person. Do not invent regulations or cite specific standard numbers.
+You are an AI system. Present your suggestions as starting points for the educator's own judgement, not as authority.
+The evidence on AI in dental education consists mostly of attitude surveys and small single-institution pilots. Foundational AI literacy has the strongest support. Do not claim that any AI teaching approach has been shown to change clinical behaviour or patient outcomes.
+Where relevant, distinguish what the educator can change themselves from what depends on departmental or institutional conditions (policies, norms, recognition, time).
+Never suggest producing documentation of AI integration that is not matched by actual practice.
+Do not cite specific studies, authors, statistics or accreditation standard numbers.
+End with one short question that invites the educator to test your suggestion against their own context.`;
 }
 
 // Plan prompt (v3 brief, Section 8.5): both profiles plus the decoupling probe, kept separate.
@@ -129,7 +135,8 @@ export async function POST(req) {
       messages: [{ role: "user", content: prompt }],
     });
     const text = msg.content.filter((b) => b.type === "text").map((b) => b.text).join("\n").trim();
-    return Response.json({ text });
+    // The model name is shown above every reply (AI disclosure, DP4).
+    return Response.json({ text, model: msg.model || model });
   } catch (err) {
     console.error("coach error", err?.status, err?.message);
     return Response.json({ error: "upstream" }, { status: 502 });

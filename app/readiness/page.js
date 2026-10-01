@@ -154,8 +154,8 @@ export default function Readiness() {
         <CoachBox
           buttonLabel={t.getPlan}
           buildRequest={() => ({ mode: "plan", practice: practiceMeans(), institutional: instMeans(), decoupling })}
-          onResult={(text) => addEntry({
-            kind: "plan", scores: practiceMeans(), institutional: instMeans(), decoupling, text, lang,
+          onResult={(text, model) => addEntry({
+            kind: "plan", scores: practiceMeans(), institutional: instMeans(), decoupling, text, model, lang,
             instrumentVersions: { practice: PRACTICE_INSTRUMENT.version, institutional: INSTITUTIONAL_INSTRUMENT.version },
           })}
         />

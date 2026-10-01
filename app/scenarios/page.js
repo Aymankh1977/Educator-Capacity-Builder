@@ -131,7 +131,10 @@ export default function Scenarios() {
             key={`${sc.id}-${opt.id}-${entryId.current}`}
             buttonLabel={t.getDebrief}
             buildRequest={() => ({ mode: "debrief", scenarioId: sc.id, optionId: opt.id, reflection })}
-            onResult={(text) => entryId.current && updateEntry(entryId.current, { text })}
+            onResult={(text, model) => {
+              if (entryId.current) updateEntry(entryId.current, { text, model });
+              return entryId.current;
+            }}
           />
 
           <button className="linkish" onClick={reset}>{t.tryAnother}</button>

@@ -183,10 +183,22 @@ function PlanEntry({ e, t, lang, date }) {
           )}
         </dl>
       )}
+      <p className="ai-disclosure">{t.aiDisclosure(e.model || t.modelNotRecorded)}</p>
       <div className="entry-text" lang={e.lang} dir={e.lang === "ar" ? "rtl" : "ltr"}>
         <Paragraphs text={e.text} />
       </div>
+      <Rating e={e} t={t} />
     </article>
+  );
+}
+
+function Rating({ e, t }) {
+  if (!e.rating) return null;
+  return (
+    <p className="note">
+      <strong>{t.yourRating}:</strong> {t.ratingLabel[e.rating.value]}
+      {e.rating.why ? ` — ${e.rating.why}` : ""}
+    </p>
   );
 }
 
@@ -209,9 +221,11 @@ function ReflectionEntry({ e, t, lang, date }) {
       {e.text && (
         <>
           <h3>{t.coachFeedback}</h3>
+          <p className="ai-disclosure">{t.aiDisclosure(e.model || t.modelNotRecorded)}</p>
           <div className="entry-text" lang={e.lang} dir={e.lang === "ar" ? "rtl" : "ltr"}>
             <Paragraphs text={e.text} />
           </div>
+          <Rating e={e} t={t} />
         </>
       )}
     </article>
