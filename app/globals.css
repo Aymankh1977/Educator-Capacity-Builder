@@ -253,6 +253,14 @@ html[dir="rtl"] .scenario-group h2 { text-transform: none; letter-spacing: 0; }
 .tags { display: inline-flex; gap: 4px; flex: none; }
 .pillar-chip { display: inline-flex; align-items: center; gap: 6px; margin-inline-end: 14px; }
 
+/* v3: accreditation bridge */
+.theme-list { list-style: none; padding: 0; margin: 8px 0 24px; display: grid; gap: 12px; }
+.theme-list li { display: flex; gap: 12px; align-items: flex-start; }
+.saudi { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 18px; }
+.platform-list { padding-inline-start: 20px; }
+.placeholder { font-family: ui-monospace, monospace; font-size: 0.85rem; background: #fff4d6; color: #6b4e00; padding: 1px 6px; border-radius: 4px; }
+.caution { margin: 28px 0 0; padding: 14px 18px; border-radius: 8px; background: #fbeceb; border-inline-start: 4px solid var(--weak); }
+
 @media print {
   .topbar, .footer, .no-print { display: none !important; }
   body { background: #fff; font-size: 11pt; }

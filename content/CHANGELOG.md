@@ -13,5 +13,6 @@ Status values: `draft`, `delphi-reviewed`, `validated`. All content is currently
   - SC1–SC4 are new and evidence-anchored. Why: DR3 (SC1), DR4 (SC2), DR7 and Meyer and Rowan (1977) (SC3), DR1 and DR5 (SC4).
   - SC5–SC7 keep their v2 text unchanged (previously `feedback-tool`, `reflections`, `module-policy`; recorded as `legacyId`) and gain provenance.
   - The v2 radiograph scenario is retired and superseded by SC1, which addresses the same situation with an evidence anchor (DR3). It is kept in the file with `retired: true` only so that earlier practice-log entries still display.
+- **Accreditation bridge (`accreditation.json`).** New: the text of the `/accreditation` page (brief Section 8.3), with pillar-to-theme links at theme level only, the GDC-alignment framing for Saudi programmes, and a fixed caution that outputs are not accreditation evidence. Why: DP7; Section 1.1 of the brief. Platform URLs are placeholders.
 - **Design principles (`design-principles.json`).** New: DP1–DP7, Iteration 0, draft for Delphi review.
 - **Arabic.** All Arabic text is marked `ar_status: "draft — needs human review"`.

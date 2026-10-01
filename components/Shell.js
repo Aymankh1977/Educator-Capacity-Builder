@@ -11,6 +11,7 @@ export default function Shell({ children }) {
     ["/readiness", t.navReadiness],
     ["/scenarios", t.navScenarios],
     ["/journal", t.navJournal],
+    ["/accreditation", t.navAccreditation],
   ];
   return (
     <>
