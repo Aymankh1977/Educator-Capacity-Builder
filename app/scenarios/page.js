@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { useLang } from "@/components/LangProvider";
 import CoachBox from "@/components/CoachBox";
 import WhyThis from "@/components/WhyThis";
-import { SCENARIOS, pillarByKey } from "@/lib/realai";
+import { SCENARIOS, SCENARIO_GROUPS, pillarByKey } from "@/lib/realai";
 import { addEntry, updateEntry } from "@/lib/journal";
 
 // Flow: choose a response → write a reflection → then see the REAL-AI fit rating and optional coaching.
@@ -32,7 +32,11 @@ export default function Scenarios() {
   }
 
   function submit() {
-    entryId.current = addEntry({ kind: "reflection", scenarioId: sc.id, optionId: choice, reflection: reflection.trim(), lang });
+    // Store the exact prompt and scenario version shown, so the record says what was actually asked.
+    entryId.current = addEntry({
+      kind: "reflection", scenarioId: sc.id, scenarioVersion: sc.version, optionId: choice,
+      prompt: sc.reflectionPrompt?.[lang], reflection: reflection.trim(), lang,
+    });
     setSubmitted(true);
   }
 
@@ -40,22 +44,29 @@ export default function Scenarios() {
     return (
       <section className="page">
         <h1>{t.chooseScenario}</h1>
-        <ul className="scenario-list">
-          {SCENARIOS.map((s) => {
-            const p = pillarByKey(s.pillar);
-            return (
-              <li key={s.id} style={{ "--c": p.color }}>
-                <button onClick={() => open(s.id)}>
-                  <span className="tag" dir="ltr">{p.key}</span>
-                  <span>
-                    <strong>{s.title[lang]}</strong>
-                    <small>{p.name[lang]}</small>
-                  </span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
+        {SCENARIO_GROUPS.map((g) => (
+          <div key={g.id} className="scenario-group">
+            <h2>{g.name[lang]}</h2>
+            <ul className="scenario-list">
+              {SCENARIOS.filter((s) => s.group === g.id).map((s) => {
+                const ps = s.pillars.map(pillarByKey);
+                return (
+                  <li key={s.id} style={{ "--c": ps[0].color }}>
+                    <button onClick={() => open(s.id)}>
+                      <span className="tags" dir="ltr">
+                        {ps.map((p) => <span key={p.key} className="tag" style={{ "--c": p.color }}>{p.key}</span>)}
+                      </span>
+                      <span>
+                        <strong>{s.title[lang]}</strong>
+                        <small>{ps.map((p) => p.name[lang]).join(" · ")}</small>
+                      </span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))}
       </section>
     );
   }
@@ -66,7 +77,13 @@ export default function Scenarios() {
   return (
     <section className="page" style={{ "--c": p.color }}>
       <button className="back" onClick={() => setActiveId(null)}>{t.allScenarios}</button>
-      <p className="pillar-line"><span className="tag" dir="ltr">{p.key}</span> {p.name[lang]}</p>
+      <p className="pillar-line">
+        {sc.pillars.map(pillarByKey).map((pp) => (
+          <span key={pp.key} className="pillar-chip">
+            <span className="tag" dir="ltr" style={{ "--c": pp.color }}>{pp.key}</span> {pp.name[lang]}
+          </span>
+        ))}
+      </p>
       <h1>{sc.title[lang]}</h1>
       <p className="context">{sc.context[lang]}</p>
       <WhyThis objects={sc} />
@@ -89,7 +106,7 @@ export default function Scenarios() {
 
       {opt && !submitted && (
         <div className="reflect">
-          <label htmlFor="reflection">{t.reflectPrompt}</label>
+          <label htmlFor="reflection">{sc.reflectionPrompt?.[lang] || t.reflectPrompt}</label>
           <textarea id="reflection" rows={4} maxLength={1500} value={reflection} onChange={(e) => setReflection(e.target.value)} />
           <p className="note">{t.revealNote}</p>
           <div>

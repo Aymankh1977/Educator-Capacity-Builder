@@ -246,6 +246,13 @@ html[dir="rtl"] .entry h3 { text-transform: none; letter-spacing: 0; }
 .probe p:last-child { margin: 0; }
 @media (max-width: 560px) { .bar-row { grid-template-columns: 1fr auto; } .bar { grid-column: 1 / -1; grid-row: 2; } }
 
+/* v3: scenario groups and multi-pillar tags */
+.scenario-group { margin-top: 28px; }
+.scenario-group h2 { font-size: 1rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+html[dir="rtl"] .scenario-group h2 { text-transform: none; letter-spacing: 0; }
+.tags { display: inline-flex; gap: 4px; flex: none; }
+.pillar-chip { display: inline-flex; align-items: center; gap: 6px; margin-inline-end: 14px; }
+
 @media print {
   .topbar, .footer, .no-print { display: none !important; }
   body { background: #fff; font-size: 11pt; }

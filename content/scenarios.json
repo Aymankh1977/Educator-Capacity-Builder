@@ -1,83 +1,336 @@
 {
   "version": "0.3.0",
-  "scenarios": [
+  "groups": [
     {
-      "id": "reflections",
+      "id": "classroom",
       "version": "0.3.0",
       "status": "draft",
+      "name": {
+        "en": "Classroom and clinic",
+        "ar": "القاعة الدراسية والعيادة"
+      },
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "programme",
+      "version": "0.3.0",
+      "status": "draft",
+      "name": {
+        "en": "Programme and institution",
+        "ar": "البرنامج والمؤسسة"
+      },
+      "ar_status": "draft — needs human review"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC1",
+      "version": "0.3.0",
+      "status": "draft",
+      "group": "classroom",
       "pillars": [
+        "A",
         "R"
       ],
       "title": {
-        "en": "Case reflections that read too well",
-        "ar": "تأملات حالات تبدو مصقولة أكثر من اللازم"
+        "en": "The explanation that persuades",
+        "ar": "التفسير المُقنِع"
       },
       "context": {
-        "en": "Fourth-year students submit written reflections on a periodontal patient they treated. Several are fluent but generic, with few details about the actual patient. You suspect AI drafting.",
-        "ar": "يقدّم طلاب السنة الرابعة تأملات مكتوبة عن مريض لثة عالجوه. كثير منها سلس لكنه عام، ويفتقر إلى تفاصيل عن المريض الفعلي. تشكّ في أنها صيغت بالذكاء الاصطناعي."
+        "en": "Your school is piloting a caries-detection tool with heat-map explanations in the third-year clinic. Supervisors notice that students rarely disagree with the AI once they have seen the heat map, including on a radiograph you read as cervical burnout. The pilot lead wants to extend the tool to all clinics next term.",
+        "ar": "تجرّب كليتك أداةً للكشف عن التسوّس تقدّم تفسيراتها على هيئة خرائط حرارية في عيادة السنة الثالثة. ويلاحظ المشرفون أن الطلاب نادرًا ما يخالفون الذكاء الاصطناعي بعد أن يروا الخريطة الحرارية، بما في ذلك صورة شعاعية تقرؤها أنت على أنها احتراق عنقي (cervical burnout). ويرغب مسؤول التجربة في تعميم الأداة على جميع العيادات في الفصل الدراسي القادم."
       },
       "options": [
         {
           "id": "a",
           "fit": "weak",
           "text": {
-            "en": "Run every reflection through an AI detector and penalise the flagged ones.",
-            "ar": "أمرّر كل التأملات عبر أداة كشف الذكاء الاصطناعي وأعاقب ما تُشير إليه."
+            "en": "Extend it. The explanations make the AI transparent, so students are learning from it.",
+            "ar": "أعمّمها؛ فالتفسيرات تجعل الذكاء الاصطناعي شفافًا، ومن ثَمّ يتعلّم الطلاب منه."
           },
           "feedback": {
-            "en": "Detectors are unreliable and flag non-native English writers more often, so this risks unfair penalties without improving learning.",
-            "ar": "أدوات الكشف غير موثوقة، وتُشير إلى كتابات غير الناطقين بالإنجليزية أكثر من غيرهم، مما يعرّض الطلاب لعقوبات غير عادلة دون تحسين التعلّم."
+            "en": "The available evidence suggests that explanations can increase novices' deference to AI rather than reduce it. Transparency for the expert is not the same as protection for the learner.",
+            "ar": "تشير الأدلة المتاحة إلى أن التفسيرات قد تزيد انقياد المبتدئين للذكاء الاصطناعي بدلًا من أن تقلّله. فالشفافية في نظر الخبير ليست هي الحماية في حق المتعلّم."
           }
         },
         {
           "id": "b",
           "fit": "strong",
           "text": {
-            "en": "Hold a short conversation with each student about their clinical reasoning, and redesign the next brief to require patient-specific details and an AI-use statement.",
-            "ar": "أُجري حوارًا قصيرًا مع كل طالب حول استدلاله السريري، وأعيد تصميم التكليف القادم ليتطلب تفاصيل خاصة بالمريض وإفصاحًا عن استخدام الذكاء الاصطناعي."
+            "en": "Require students to record their own reading before the overlay is shown, track how often they disagree with the AI, and make the extension conditional on that data.",
+            "ar": "أُلزم الطلاب بتسجيل قراءتهم الخاصة قبل عرض الطبقة، وأتتبّع عدد مرات اختلافهم مع الذكاء الاصطناعي، وأجعل التعميم مشروطًا بهذه البيانات."
           },
           "feedback": {
-            "en": "This checks the learning directly, keeps the task tied to the real patient, and makes AI use something to discuss rather than hide.",
-            "ar": "يتحقق هذا من التعلّم مباشرة، ويُبقي المهمة مرتبطة بالمريض الحقيقي، ويجعل استخدام الذكاء الاصطناعي قابلًا للنقاش بدل أن يكون خفيًا."
+            "en": "Sequencing protects independent judgement, and the pilot starts producing evidence about consequences, not only accuracy.",
+            "ar": "يحمي هذا الترتيب الحكمَ المستقل، وتبدأ التجربة في إنتاج أدلة على النتائج المترتبة، لا على الدقة وحدها."
           }
         },
         {
           "id": "c",
           "fit": "partial",
           "text": {
-            "en": "Leave it. The reflections are formative, so they do not count.",
-            "ar": "أتجاهل الأمر، فالتأملات تكوينية ولا تُحتسب في الدرجات."
+            "en": "Withdraw the tool from student clinics entirely.",
+            "ar": "أسحب الأداة من عيادات الطلاب كليًا."
           },
           "feedback": {
-            "en": "Low stakes do not make the problem go away. If reflections no longer show reasoning, the task has stopped doing its job.",
-            "ar": "انخفاض أهمية الدرجة لا يُلغي المشكلة. إذا لم تعد التأملات تُظهر الاستدلال، فقد فقدت المهمة غايتها."
+            "en": "This removes the risk, but also the chance for students to learn to work critically with tools they will meet in practice.",
+            "ar": "يزيل هذا الخطر، لكنه يزيل أيضًا فرصة الطلاب لتعلّم التعامل النقدي مع أدوات سيصادفونها في الممارسة."
           }
         }
       ],
+      "reflectionPrompt": {
+        "en": "What would count as evidence, in your clinic, that a tool like this is improving students' judgement rather than replacing it?",
+        "ar": "ما الذي يُعدّ دليلًا، في عيادتك، على أن أداةً كهذه تُحسّن حكم الطلاب بدلًا من أن تحلّ محلّه؟"
+      },
       "provenance": [
         {
-          "type": "researcher-constructed",
-          "ref": "v1",
+          "type": "study1",
+          "ref": "DR3",
+          "table1Id": "[AYMAN TO SUPPLY: Table 1 ID]",
           "note": {
-            "en": "Researcher-constructed scenario, written for v1 of this studio.",
-            "ar": "سيناريو من إعداد الباحث، كُتب للإصدار الأول من الاستوديو."
-          }
-        },
-        {
-          "type": "realai-paper",
-          "ref": "Reflective Integration",
-          "note": {
-            "en": "Structured by the Reflective Integration pillar of the REAL-AI framework.",
-            "ar": "مبني على ركيزة «التكامل التأملي» في إطار REAL-AI."
+            "en": "Based on Study 1 (scoping review of AI in dental education): the only controlled study of explainable AI in novice clinicians found that explanations increased deference to the AI.",
+            "ar": "استنادًا إلى الدراسة 1 (مراجعة استكشافية للذكاء الاصطناعي في تعليم طب الأسنان): وجدت الدراسة المضبوطة الوحيدة التي تناولت الذكاء الاصطناعي القابل للتفسير لدى الأطباء المبتدئين أن التفسيرات زادت من انقيادهم للذكاء الاصطناعي."
           }
         }
       ],
       "ar_status": "draft — needs human review"
     },
     {
-      "id": "feedback-tool",
+      "id": "SC2",
       "version": "0.3.0",
       "status": "draft",
+      "group": "classroom",
+      "pillars": [
+        "A",
+        "L"
+      ],
+      "title": {
+        "en": "Better with the tool, not without it",
+        "ar": "أفضل مع الأداة، لا من دونها"
+      },
+      "context": {
+        "en": "A colleague reports that students using an AI tutor for treatment planning scored higher on in-module quizzes, and proposes citing this in the programme's annual monitoring report as evidence of curriculum innovation. Students took the quizzes with the tutor available.",
+        "ar": "يفيد أحد زملائك بأن الطلاب الذين استخدموا مُعلّمًا آليًا بالذكاء الاصطناعي في تخطيط العلاج حصلوا على درجات أعلى في الاختبارات القصيرة داخل المقرر، ويقترح الاستشهاد بذلك في تقرير المتابعة السنوي للبرنامج دليلًا على الابتكار في المنهج. وقد أدّى الطلاب هذه الاختبارات والمُعلّم الآلي متاح لهم."
+      },
+      "options": [
+        {
+          "id": "a",
+          "fit": "weak",
+          "text": {
+            "en": "Include it. Improved scores show improved learning.",
+            "ar": "أُدرجه؛ فتحسّن الدرجات يدل على تحسّن التعلّم."
+          },
+          "feedback": {
+            "en": "Performance with a tool says little about performance without it, and the controlled evidence available points the other way.",
+            "ar": "الأداء مع الأداة لا يكشف إلا القليل عن الأداء من دونها، والأدلة المضبوطة المتاحة تشير إلى عكس ذلك."
+          }
+        },
+        {
+          "id": "b",
+          "fit": "strong",
+          "text": {
+            "en": "Include it with that caveat, and add an assessment point without the tutor before claiming a learning gain.",
+            "ar": "أُدرجه مع هذا التحفّظ، وأضيف نقطة تقييم من دون المُعلّم الآلي قبل الادعاء بحدوث مكسب في التعلّم."
+          },
+          "feedback": {
+            "en": "This reports honestly, and the design change can actually answer the question.",
+            "ar": "يقدّم هذا تقريرًا أمينًا، ويمكن لتعديل التصميم أن يجيب فعلًا عن السؤال."
+          }
+        },
+        {
+          "id": "c",
+          "fit": "partial",
+          "text": {
+            "en": "Leave it out of the report until there is stronger evidence.",
+            "ar": "أستبعده من التقرير إلى أن تتوافر أدلة أقوى."
+          },
+          "feedback": {
+            "en": "This avoids overclaiming, but it misses the chance to show that the programme evaluates its own innovations.",
+            "ar": "يتجنّب هذا المبالغة في الادعاء، لكنه يُفوّت فرصة إظهار أن البرنامج يقيّم ابتكاراته بنفسه."
+          }
+        }
+      ],
+      "reflectionPrompt": {
+        "en": "In one of your own modules, how would you find out whether students can do without the AI what they can do with it?",
+        "ar": "في أحد مقرراتك، كيف ستعرف ما إذا كان الطلاب قادرين على أداء ما يؤدّونه بالذكاء الاصطناعي من دونه؟"
+      },
+      "provenance": [
+        {
+          "type": "study1",
+          "ref": "DR4",
+          "table1Id": "[AYMAN TO SUPPLY: Table 1 ID]",
+          "note": {
+            "en": "Based on Study 1 (scoping review of AI in dental education): the only randomised controlled trial among the studies reviewed found no transfer of AI training to unaided performance.",
+            "ar": "استنادًا إلى الدراسة 1 (مراجعة استكشافية للذكاء الاصطناعي في تعليم طب الأسنان): لم تجد التجربة العشوائية المضبوطة الوحيدة بين الدراسات المشمولة انتقالًا لأثر التدريب بالذكاء الاصطناعي إلى الأداء من دون مساعدة."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "SC3",
+      "version": "0.3.0",
+      "status": "draft",
+      "group": "programme",
+      "pillars": [
+        "R",
+        "L"
+      ],
+      "title": {
+        "en": "Evidence for the visit",
+        "ar": "أدلة للزيارة"
+      },
+      "context": {
+        "en": "Your programme's accreditation visit is in four months. The quality office asks each module lead for evidence of \"AI integration in teaching\". Few colleagues currently use AI in their teaching, and there is no programme policy.",
+        "ar": "موعد زيارة الاعتماد لبرنامجك بعد أربعة أشهر. ويطلب مكتب الجودة من كل منسّق مقرر أدلةً على «دمج الذكاء الاصطناعي في التدريس». ولا يستخدم الذكاء الاصطناعي في تدريسه حاليًا إلا قلّة من الزملاء، ولا توجد سياسة بشأنه على مستوى البرنامج."
+      },
+      "options": [
+        {
+          "id": "a",
+          "fit": "weak",
+          "text": {
+            "en": "Write a short statement for each module describing how AI could be used, and add AI to the module descriptors.",
+            "ar": "أكتب بيانًا قصيرًا لكل مقرر يصف كيف يمكن استخدام الذكاء الاصطناعي، وأضيف الذكاء الاصطناعي إلى توصيفات المقررات."
+          },
+          "feedback": {
+            "en": "This produces documentation without practice: the gap between formal structure and actual activity that institutional theory calls decoupling. It may satisfy a checklist and still mislead the panel.",
+            "ar": "ينتج هذا توثيقًا بلا ممارسة: أي الفجوة بين البنية الرسمية والنشاط الفعلي التي تسمّيها النظرية المؤسسية «الانفصال». وقد يستوفي قائمة تحقق، ومع ذلك يضلّل لجنة المراجعة."
+          }
+        },
+        {
+          "id": "b",
+          "fit": "strong",
+          "text": {
+            "en": "Report the current position honestly, show one or two genuine small-scale changes, and present a staged staff-development plan with dates.",
+            "ar": "أعرض الوضع الحالي بأمانة، وأقدّم تغييرًا أو تغييرين حقيقيين على نطاق صغير، وأعرض خطة مرحلية لتطوير أعضاء هيئة التدريس بمواعيد محددة."
+          },
+          "feedback": {
+            "en": "Panels can work with an honest baseline and a credible plan, and the plan creates the conditions for the change to become real.",
+            "ar": "تستطيع لجان المراجعة العمل انطلاقًا من خط أساس صادق وخطة موثوقة، والخطة تهيّئ الظروف كي يصبح التغيير حقيقيًا."
+          }
+        },
+        {
+          "id": "c",
+          "fit": "partial",
+          "text": {
+            "en": "Ask the one AI-enthusiast colleague to run a showcase session before the visit.",
+            "ar": "أطلب من الزميل الوحيد المتحمّس للذكاء الاصطناعي تقديم جلسة عرض قبل الزيارة."
+          },
+          "feedback": {
+            "en": "This gives the panel something real to see, but it concentrates capacity in one person and risks presenting an exception as the norm.",
+            "ar": "يمنح هذا اللجنة شيئًا حقيقيًا تراه، لكنه يحصر القدرة في شخص واحد، ويخاطر بتقديم الاستثناء على أنه القاعدة."
+          }
+        }
+      ],
+      "reflectionPrompt": {
+        "en": "In your setting, what distinguishes evidence that AI is integrated from evidence that it has been documented?",
+        "ar": "في بيئتك، ما الذي يميّز الدليل على أن الذكاء الاصطناعي مُدمَج فعلًا من الدليل على أنه وُثِّق فحسب؟"
+      },
+      "provenance": [
+        {
+          "type": "study1",
+          "ref": "DR7",
+          "note": {
+            "en": "Based on Study 1's conclusion: standards that specify student outcomes without specifying institutional conditions may operate only as exhortation.",
+            "ar": "استنادًا إلى خلاصة الدراسة 1: المعايير التي تحدد مخرجات الطلاب دون تحديد الظروف المؤسسية قد لا تعمل إلا بوصفها حثًّا."
+          }
+        },
+        {
+          "type": "theory",
+          "ref": "Meyer and Rowan (1977)",
+          "note": {
+            "en": "Institutional theory: the decoupling of formal structure from actual activity (Meyer and Rowan, 1977).",
+            "ar": "النظرية المؤسسية: الانفصال بين البنية الرسمية والنشاط الفعلي (Meyer وRowan، 1977)."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "SC4",
+      "version": "0.3.0",
+      "status": "draft",
+      "group": "programme",
+      "pillars": [
+        "L",
+        "E"
+      ],
+      "title": {
+        "en": "Who teaches the teachers?",
+        "ar": "من يعلّم المعلّمين؟"
+      },
+      "context": {
+        "en": "Your head of department wants AI literacy added to the BDS curriculum next year. Most colleagues who would teach it say they feel unprepared, and two say that students already know more than they do.",
+        "ar": "يرغب رئيس قسمك في إضافة الإلمام بالذكاء الاصطناعي إلى منهج بكالوريوس طب الأسنان في العام المقبل. ويقول معظم الزملاء الذين سيدرّسونه إنهم يشعرون بعدم الاستعداد، ويقول اثنان منهم إن الطلاب يعرفون عنه أكثر منهم بالفعل."
+      },
+      "options": [
+        {
+          "id": "a",
+          "fit": "weak",
+          "text": {
+            "en": "Assign the content to the most junior lecturers, who are likely to be more familiar with the tools.",
+            "ar": "أُسند المحتوى إلى أحدث المحاضرين عهدًا، فهم على الأرجح أكثر ألفةً بالأدوات."
+          },
+          "feedback": {
+            "en": "This places an institutional responsibility on the least powerful staff, and treats familiarity with tools as teaching expertise.",
+            "ar": "يضع هذا مسؤوليةً مؤسسية على عاتق أقل أعضاء هيئة التدريس نفوذًا، ويعامل الألفة بالأدوات على أنها خبرة تدريسية."
+          }
+        },
+        {
+          "id": "b",
+          "fit": "strong",
+          "text": {
+            "en": "Phase it: build staff capacity first through a short shared programme, start with foundational literacy (the content with the strongest evidence base), and involve students as partners in the applied parts.",
+            "ar": "أُطبّقه على مراحل: أبني قدرات أعضاء هيئة التدريس أولًا من خلال برنامج مشترك قصير، وأبدأ بالإلمام الأساسي (وهو المحتوى الذي يستند إلى أقوى قاعدة أدلة)، وأُشرك الطلاب شركاءَ في الأجزاء التطبيقية."
+          },
+          "feedback": {
+            "en": "This matches the requirement to what the evidence supports and what staff can deliver, and it draws on students' familiarity without handing them the teaching.",
+            "ar": "يوائم هذا بين المتطلب وبين ما تدعمه الأدلة وما يستطيع أعضاء هيئة التدريس تقديمه، ويستفيد من ألفة الطلاب دون أن يسلّمهم مهمة التدريس."
+          }
+        },
+        {
+          "id": "c",
+          "fit": "partial",
+          "text": {
+            "en": "Buy an online AI course for students and count completions.",
+            "ar": "أشتري للطلاب مقررًا إلكترونيًا في الذكاء الاصطناعي، وأحصي أعداد من أتمّوه."
+          },
+          "feedback": {
+            "en": "It is quick to document, but it outsources the learning and leaves staff capacity unchanged.",
+            "ar": "توثيقه سريع، لكنه يُسند التعلّم إلى جهة خارجية ويترك قدرات أعضاء هيئة التدريس دون تغيير."
+          }
+        }
+      ],
+      "reflectionPrompt": {
+        "en": "What would your department need to have in place, beyond individual enthusiasm, for this change to last?",
+        "ar": "ما الذي يحتاج قسمك إلى توفيره، بما يتجاوز الحماس الفردي، كي يدوم هذا التغيير؟"
+      },
+      "provenance": [
+        {
+          "type": "study1",
+          "ref": "DR1",
+          "note": {
+            "en": "Based on Study 1 (Tier 3 surveys): educator capacity, not technology, appears to be the binding constraint.",
+            "ar": "استنادًا إلى الدراسة 1 (استبانات المستوى الثالث): يبدو أن قدرات المعلّمين، لا التقنية، هي القيد الحاكم."
+          }
+        },
+        {
+          "type": "study1",
+          "ref": "DR5",
+          "note": {
+            "en": "Based on Study 1: foundational AI literacy has the most defensible evidence base; applied clinical competencies do not yet.",
+            "ar": "استنادًا إلى الدراسة 1: يستند الإلمام الأساسي بالذكاء الاصطناعي إلى أمتن قاعدة أدلة، أما الكفايات السريرية التطبيقية فلم تبلغ ذلك بعد."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "SC5",
+      "legacyId": "feedback-tool",
+      "version": "0.3.0",
+      "status": "draft",
+      "group": "classroom",
       "pillars": [
         "E"
       ],
@@ -127,6 +380,10 @@
           }
         }
       ],
+      "reflectionPrompt": {
+        "en": "How would you check whether an AI tool in your teaching treats all your students fairly?",
+        "ar": "كيف ستتحقق مما إذا كانت أداة ذكاء اصطناعي تستخدمها في تدريسك تعامل جميع طلابك بإنصاف؟"
+      },
       "provenance": [
         {
           "type": "realai-paper",
@@ -134,6 +391,164 @@
           "note": {
             "en": "Not directly evidenced in the Study 1 corpus; researcher-constructed from the REAL-AI framework.",
             "ar": "لا تدعمه أدلة مباشرة في الدراسات المشمولة بالدراسة 1؛ أعدّه الباحث استنادًا إلى إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "SC6",
+      "legacyId": "reflections",
+      "version": "0.3.0",
+      "status": "draft",
+      "group": "classroom",
+      "pillars": [
+        "R"
+      ],
+      "title": {
+        "en": "Case reflections that read too well",
+        "ar": "تأملات حالات تبدو مصقولة أكثر من اللازم"
+      },
+      "context": {
+        "en": "Fourth-year students submit written reflections on a periodontal patient they treated. Several are fluent but generic, with few details about the actual patient. You suspect AI drafting.",
+        "ar": "يقدّم طلاب السنة الرابعة تأملات مكتوبة عن مريض لثة عالجوه. كثير منها سلس لكنه عام، ويفتقر إلى تفاصيل عن المريض الفعلي. تشكّ في أنها صيغت بالذكاء الاصطناعي."
+      },
+      "options": [
+        {
+          "id": "a",
+          "fit": "weak",
+          "text": {
+            "en": "Run every reflection through an AI detector and penalise the flagged ones.",
+            "ar": "أمرّر كل التأملات عبر أداة كشف الذكاء الاصطناعي وأعاقب ما تُشير إليه."
+          },
+          "feedback": {
+            "en": "Detectors are unreliable and flag non-native English writers more often, so this risks unfair penalties without improving learning.",
+            "ar": "أدوات الكشف غير موثوقة، وتُشير إلى كتابات غير الناطقين بالإنجليزية أكثر من غيرهم، مما يعرّض الطلاب لعقوبات غير عادلة دون تحسين التعلّم."
+          }
+        },
+        {
+          "id": "b",
+          "fit": "strong",
+          "text": {
+            "en": "Hold a short conversation with each student about their clinical reasoning, and redesign the next brief to require patient-specific details and an AI-use statement.",
+            "ar": "أُجري حوارًا قصيرًا مع كل طالب حول استدلاله السريري، وأعيد تصميم التكليف القادم ليتطلب تفاصيل خاصة بالمريض وإفصاحًا عن استخدام الذكاء الاصطناعي."
+          },
+          "feedback": {
+            "en": "This checks the learning directly, keeps the task tied to the real patient, and makes AI use something to discuss rather than hide.",
+            "ar": "يتحقق هذا من التعلّم مباشرة، ويُبقي المهمة مرتبطة بالمريض الحقيقي، ويجعل استخدام الذكاء الاصطناعي قابلًا للنقاش بدل أن يكون خفيًا."
+          }
+        },
+        {
+          "id": "c",
+          "fit": "partial",
+          "text": {
+            "en": "Leave it. The reflections are formative, so they do not count.",
+            "ar": "أتجاهل الأمر، فالتأملات تكوينية ولا تُحتسب في الدرجات."
+          },
+          "feedback": {
+            "en": "Low stakes do not make the problem go away. If reflections no longer show reasoning, the task has stopped doing its job.",
+            "ar": "انخفاض أهمية الدرجة لا يُلغي المشكلة. إذا لم تعد التأملات تُظهر الاستدلال، فقد فقدت المهمة غايتها."
+          }
+        }
+      ],
+      "reflectionPrompt": {
+        "en": "How could you redesign a written task you set so that it shows students' own reasoning?",
+        "ar": "كيف يمكنك إعادة تصميم مهمة كتابية تكلّف بها طلابك بحيث تُظهر استدلالهم الخاص؟"
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Researcher-constructed scenario, written for v1 of this studio.",
+            "ar": "سيناريو من إعداد الباحث، كُتب للإصدار الأول من الاستوديو."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Reflective Integration",
+          "note": {
+            "en": "Structured by the Reflective Integration pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «التكامل التأملي» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "SC7",
+      "legacyId": "module-policy",
+      "version": "0.3.0",
+      "status": "draft",
+      "group": "programme",
+      "pillars": [
+        "L"
+      ],
+      "title": {
+        "en": "Ban it or shape it?",
+        "ar": "المنع أم التوجيه؟"
+      },
+      "context": {
+        "en": "Colleagues propose banning generative AI in a second-year BDS module, with penalties for any use. You lead one of the module's assessments.",
+        "ar": "يقترح زملاؤك منع الذكاء الاصطناعي التوليدي في مقرر للسنة الثانية من برنامج طب الأسنان، مع عقوبات على أي استخدام. وأنت مسؤول عن أحد تقييمات المقرر."
+      },
+      "options": [
+        {
+          "id": "a",
+          "fit": "weak",
+          "text": {
+            "en": "Support the ban. It is the simplest rule to enforce.",
+            "ar": "أؤيد المنع، فهو أسهل قاعدة في التطبيق."
+          },
+          "feedback": {
+            "en": "Blanket bans are hard to enforce, push use out of sight, and leave students without guidance they will need in practice.",
+            "ar": "المنع الشامل صعب التطبيق، ويدفع الاستخدام إلى الخفاء، ويترك الطلاب دون توجيه سيحتاجونه في الممارسة."
+          }
+        },
+        {
+          "id": "b",
+          "fit": "strong",
+          "text": {
+            "en": "Draft task-by-task guidance with student representatives: allowed, allowed with declaration, or not allowed. Review it each term.",
+            "ar": "أعدّ مع ممثلي الطلاب إرشادات لكل مهمة: مسموح، أو مسموح مع الإفصاح، أو غير مسموح، وأراجعها كل فصل دراسي."
+          },
+          "feedback": {
+            "en": "Students share ownership of the rules, expectations are clear for each task, and the policy can change as the tools do.",
+            "ar": "يشارك الطلاب في ملكية القواعد، وتتضح التوقعات لكل مهمة، ويمكن تحديث السياسة مع تطوّر الأدوات."
+          }
+        },
+        {
+          "id": "c",
+          "fit": "weak",
+          "text": {
+            "en": "Allow any use and leave it to students' judgement.",
+            "ar": "أسمح بأي استخدام وأترك الأمر لتقدير الطلاب."
+          },
+          "feedback": {
+            "en": "Without shared expectations, students guess at the rules and assessment validity is left to chance.",
+            "ar": "دون توقعات مشتركة، يخمّن الطلاب القواعد، ويُترك صدق التقييم للصدفة."
+          }
+        }
+      ],
+      "reflectionPrompt": {
+        "en": "Who would need to be involved in setting AI rules for your module, and how?",
+        "ar": "مَن يلزم إشراكه في وضع قواعد استخدام الذكاء الاصطناعي في مقررك، وكيف؟"
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Researcher-constructed scenario, written for v1 of this studio.",
+            "ar": "سيناريو من إعداد الباحث، كُتب للإصدار الأول من الاستوديو."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Learning-Centred Partnership",
+          "note": {
+            "en": "Structured by the Learning-Centred Partnership pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «الشراكة المتمحورة حول التعلّم» في إطار REAL-AI."
           }
         }
       ],
@@ -210,80 +625,10 @@
           }
         }
       ],
-      "ar_status": "draft — needs human review"
-    },
-    {
-      "id": "module-policy",
-      "version": "0.3.0",
-      "status": "draft",
-      "pillars": [
-        "L"
-      ],
-      "title": {
-        "en": "Ban it or shape it?",
-        "ar": "المنع أم التوجيه؟"
-      },
-      "context": {
-        "en": "Colleagues propose banning generative AI in a second-year BDS module, with penalties for any use. You lead one of the module's assessments.",
-        "ar": "يقترح زملاؤك منع الذكاء الاصطناعي التوليدي في مقرر للسنة الثانية من برنامج طب الأسنان، مع عقوبات على أي استخدام. وأنت مسؤول عن أحد تقييمات المقرر."
-      },
-      "options": [
-        {
-          "id": "a",
-          "fit": "weak",
-          "text": {
-            "en": "Support the ban. It is the simplest rule to enforce.",
-            "ar": "أؤيد المنع، فهو أسهل قاعدة في التطبيق."
-          },
-          "feedback": {
-            "en": "Blanket bans are hard to enforce, push use out of sight, and leave students without guidance they will need in practice.",
-            "ar": "المنع الشامل صعب التطبيق، ويدفع الاستخدام إلى الخفاء، ويترك الطلاب دون توجيه سيحتاجونه في الممارسة."
-          }
-        },
-        {
-          "id": "b",
-          "fit": "strong",
-          "text": {
-            "en": "Draft task-by-task guidance with student representatives: allowed, allowed with declaration, or not allowed. Review it each term.",
-            "ar": "أعدّ مع ممثلي الطلاب إرشادات لكل مهمة: مسموح، أو مسموح مع الإفصاح، أو غير مسموح، وأراجعها كل فصل دراسي."
-          },
-          "feedback": {
-            "en": "Students share ownership of the rules, expectations are clear for each task, and the policy can change as the tools do.",
-            "ar": "يشارك الطلاب في ملكية القواعد، وتتضح التوقعات لكل مهمة، ويمكن تحديث السياسة مع تطوّر الأدوات."
-          }
-        },
-        {
-          "id": "c",
-          "fit": "weak",
-          "text": {
-            "en": "Allow any use and leave it to students' judgement.",
-            "ar": "أسمح بأي استخدام وأترك الأمر لتقدير الطلاب."
-          },
-          "feedback": {
-            "en": "Without shared expectations, students guess at the rules and assessment validity is left to chance.",
-            "ar": "دون توقعات مشتركة، يخمّن الطلاب القواعد، ويُترك صدق التقييم للصدفة."
-          }
-        }
-      ],
-      "provenance": [
-        {
-          "type": "researcher-constructed",
-          "ref": "v1",
-          "note": {
-            "en": "Researcher-constructed scenario, written for v1 of this studio.",
-            "ar": "سيناريو من إعداد الباحث، كُتب للإصدار الأول من الاستوديو."
-          }
-        },
-        {
-          "type": "realai-paper",
-          "ref": "Learning-Centred Partnership",
-          "note": {
-            "en": "Structured by the Learning-Centred Partnership pillar of the REAL-AI framework.",
-            "ar": "مبني على ركيزة «الشراكة المتمحورة حول التعلّم» في إطار REAL-AI."
-          }
-        }
-      ],
-      "ar_status": "draft — needs human review"
+      "ar_status": "draft — needs human review",
+      "retired": true,
+      "supersededBy": "SC1",
+      "retiredNote": "Retired in 0.3.0; superseded by SC1. Kept only so that earlier practice-log entries still display."
     }
   ]
 }

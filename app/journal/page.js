@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useLang } from "@/components/LangProvider";
 import { loadJournal, clearJournal } from "@/lib/journal";
-import { PILLARS, IC_PILLARS, SCENARIOS, pillarByKey } from "@/lib/realai";
+import { PILLARS, IC_PILLARS, findScenario, pillarByKey } from "@/lib/realai";
 
 function Paragraphs({ text }) {
   return text.split(/\n+/).filter(Boolean).map((para, i) => <p key={i}>{para}</p>);
@@ -76,7 +76,7 @@ export default function Journal() {
               </article>
             );
           }
-          const sc = SCENARIOS.find((s) => s.id === e.scenarioId);
+          const sc = findScenario(e.scenarioId);
           const opt = sc?.options.find((o) => o.id === e.optionId);
           if (!sc || !opt) return null;
           const p = pillarByKey(sc.pillar);
@@ -89,6 +89,7 @@ export default function Journal() {
               <h3>{t.yourChoice}</h3>
               <p>{opt.text[lang]} <em className={`fit-label fit-${opt.fit}`}>({t.fit[opt.fit]})</em></p>
               <h3>{t.yourReflection}</h3>
+              {e.prompt && <p className="note" lang={e.lang} dir={e.lang === "ar" ? "rtl" : "ltr"}>{e.prompt}</p>}
               <p lang={e.lang} dir={e.lang === "ar" ? "rtl" : "ltr"}>{e.reflection}</p>
               {e.text && (
                 <>
