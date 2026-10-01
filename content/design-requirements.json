@@ -1,0 +1,16 @@
+{
+  "version": "0.3.0",
+  "status": "draft",
+  "note": "Design requirements from the v3 brief, Section 3. Each traces to a finding; DR IDs are used in the provenance fields of the other content files.",
+  "ar_status": "not applicable — English-only rationale page",
+  "requirements": [
+    { "id": "DR1", "finding": "Educator capacity, not technology, appears to be the binding constraint", "source": "Study 1, Tier 3; Discussion", "requirement": "The platform targets educators, not students, and treats capacity as institutionally conditioned." },
+    { "id": "DR2", "finding": "Standards specifying student outcomes without institutional conditions act as exhortation", "source": "Study 1 Conclusion", "requirement": "Profile institutional conditions alongside individual practice (A3)." },
+    { "id": "DR3", "finding": "The only controlled study testing explainable AI in novice clinicians found automation bias", "source": "Study 1, Tier 4 [AYMAN TO SUPPLY: Table 1 ID]", "requirement": "Scenario SC1; the coach invites critique of its own output (A7)." },
+    { "id": "DR4", "finding": "The only RCT in the corpus found no transfer of AI training to unaided performance", "source": "Study 1, Tier 4 [AYMAN TO SUPPLY: Table 1 ID]", "requirement": "Scenario SC2; practice evidence asks about performance without the tool (A6)." },
+    { "id": "DR5", "finding": "Foundational AI literacy has the most defensible evidence base; applied clinical competencies do not yet", "source": "Study 1 Conclusion", "requirement": "Coach and scenarios prioritise literacy-level change and avoid overclaiming applied outcomes (A7, SC4)." },
+    { "id": "DR6", "finding": "No included intervention reached behaviour change in practice or patient outcomes", "source": "Study 1, outcome-level analysis", "requirement": "The platform captures enacted practice and its consequences, not only attitudes (A6)." },
+    { "id": "DR7", "finding": "The risk of ceremonial compliance under accreditation pressure", "source": "Meyer and Rowan (1977); Study 2 Theme 2 (documentation)", "requirement": "No certificates; a decoupling probe item; scenario SC3 (A3, A6)." },
+    { "id": "DR8", "finding": "Design must be revisable from Studies 2–3 and the Delphi", "source": "DBR methodology chapter", "requirement": "All content in versioned data files with provenance (A1)." }
+  ]
+}

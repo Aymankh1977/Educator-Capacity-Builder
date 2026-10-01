@@ -285,6 +285,33 @@ select { font: inherit; width: 100%; padding: 10px 12px; border: 1.5px solid var
 .rating-options label.on { border-color: var(--ink); font-weight: 700; }
 .rating-options input { width: auto; margin: 0; }
 
+/* v3: design rationale page */
+.rationale section { margin-top: 36px; }
+.rationale h3 { font-size: 1rem; margin: 18px 0 6px; }
+.rationale h4 { font-size: 0.95rem; margin: 14px 0 4px; }
+.toc ol { columns: 2; padding-inline-start: 20px; font-size: 0.95rem; }
+.chain li { margin-bottom: 6px; }
+.callout { background: var(--surface); border-inline-start: 4px solid var(--ink); padding: 12px 16px; border-radius: 0 8px 8px 0; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; background: var(--surface); }
+.rationale table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+.rationale th, .rationale td { text-align: start; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--rule); }
+.rationale th { background: var(--bg); }
+.cmap { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; gap: 8px; align-items: stretch; margin: 12px 0; }
+.cmap-col { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 12px; font-size: 0.86rem; }
+.cmap-col h3 { margin-top: 0; font-size: 0.9rem; }
+.cmap-col ul { padding-inline-start: 16px; margin: 0; }
+.cmap-col li { margin-bottom: 6px; }
+.cmap-arrow { display: grid; place-items: center; color: var(--muted); font-size: 1.3rem; }
+.dp-list { padding-inline-start: 20px; }
+.dp-list li { margin-bottom: 14px; }
+.dp-list h3 { margin: 0 0 2px; }
+.dp-list p { margin: 0 0 4px; }
+.dp-meta { font-size: 0.82rem; color: var(--muted); }
+.md code, .rationale code { font-size: 0.85em; background: var(--empty); padding: 0 4px; border-radius: 4px; }
+.refs li { margin-bottom: 4px; }
+.verify { color: var(--partial); font-size: 0.85rem; }
+@media (max-width: 760px) { .cmap { grid-template-columns: 1fr; } .cmap-arrow { transform: rotate(90deg); } .toc ol { columns: 1; } }
+
 @media print {
   .topbar, .footer, .no-print { display: none !important; }
   body { background: #fff; font-size: 11pt; }

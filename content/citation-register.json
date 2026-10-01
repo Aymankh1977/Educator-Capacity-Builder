@@ -1,0 +1,24 @@
+{
+  "version": "0.3.0",
+  "note": "The only sources the platform may cite (v3 brief, Section 9). Status: T = cited in thesis materials (check against the final thesis reference list); V = added in the v3 brief, verify before any thesis use. No DOIs. `match` is the text used to detect whether a source is cited on a page.",
+  "fullReferences": "[AYMAN TO SUPPLY: full Manchester-Harvard references from the thesis reference list]",
+  "sources": [
+    { "short": "Aura-Tormos et al. (2026)", "status": "T", "usedFor": "Patchy curricular implementation", "match": "Aura-Tormos et al." },
+    { "short": "Anderson and Shattuck (2012)", "status": "T", "usedFor": "DBR", "match": "Anderson and Shattuck" },
+    { "short": "DBR Collective (2003)", "status": "T", "usedFor": "DBR", "match": "DBR Collective" },
+    { "short": "Dewey (1938)", "status": "T", "usedFor": "Pragmatism", "match": "Dewey (1938)" },
+    { "short": "DiMaggio and Powell (1983)", "status": "T", "usedFor": "Isomorphism", "match": "DiMaggio and Powell" },
+    { "short": "Hoadley and Campos (2022)", "status": "T", "usedFor": "DBR and pragmatism", "match": "Hoadley and Campos" },
+    { "short": "McKenney and Reeves (2019)", "status": "T", "usedFor": "Educational design research", "match": "McKenney and Reeves" },
+    { "short": "Messick (1998)", "status": "T", "usedFor": "Consequential validity", "match": "Messick (1998)" },
+    { "short": "Meyer and Rowan (1977)", "status": "T", "usedFor": "Decoupling", "match": "Meyer and Rowan" },
+    { "short": "Obczovsky et al. (2025)", "status": "T", "usedFor": "Systematising design decisions", "match": "Obczovsky et al." },
+    { "short": "Schwendicke et al. (2022)", "status": "T", "usedFor": "AI competency framework", "match": "Schwendicke et al." },
+    { "short": "Scott (2014)", "status": "T", "usedFor": "Three pillars", "match": "Scott (2014)" },
+    { "short": "Wenger (1998)", "status": "T", "usedFor": "Boundary object (as used in thesis)", "match": "Wenger (1998)" },
+    { "short": "Khalifah et al. (REAL-AI paper, under review)", "status": "T", "usedFor": "REAL-AI framework", "match": "REAL-AI paper" },
+    { "short": "Study 1: Khalifah et al., scoping review (under review)", "status": "T", "usedFor": "Findings DR1–DR6", "match": "Study 1" },
+    { "short": "Sandoval (2014)", "status": "V", "detail": "conjecture mapping, Journal of the Learning Sciences", "usedFor": "Conjecture map", "match": "Sandoval" },
+    { "short": "Star and Griesemer (1989)", "status": "V", "detail": "boundary objects, Social Studies of Science", "usedFor": "Origin of boundary-object concept", "match": "Star and Griesemer" }
+  ]
+}

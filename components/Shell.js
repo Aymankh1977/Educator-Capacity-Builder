@@ -31,6 +31,7 @@ export default function Shell({ children }) {
       <main className="wrap">{children}</main>
       <footer className="wrap footer">
         <p>{t.disclaimer}</p>
+        <p><Link href="/rationale">{t.rationaleLink}</Link></p>
         <p dir="ltr">{t.footer}</p>
       </footer>
     </>
