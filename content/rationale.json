@@ -9,37 +9,102 @@
   "purpose": {
     "intro": "The platform exists because of a specific causal chain. Every page, feature and piece of text must be traceable to it.",
     "chain": [
-      { "label": "Demand", "text": "Accreditation bodies are under pressure to specify how AI should be incorporated into dental curricula (Study 1)." },
-      { "label": "Gap", "text": "An international competency framework has existed since 2022 (Schwendicke et al., 2022), yet curricular implementation remains patchy and supplementary (Aura-Tormos et al., 2026)." },
-      { "label": "Binding constraint", "text": "Study 1 indicates that the limiting factor appears to be educator capacity, not student readiness or technology. Most surveyed faculty report no routine use of AI in assessment, and in some samples fewer than 20% understand machine-learning fundamentals (Study 1, Tier 3)." },
-      { "label": "Institutional risk", "text": "Standards that specify student outcomes without specifying institutional conditions may operate only as exhortation (Study 1 conclusion). Under isomorphic pressure (DiMaggio and Powell, 1983), schools may respond ceremonially: documenting AI integration without changing practice. This is the decoupling of formal structure from activity (Meyer and Rowan, 1977)." },
-      { "label": "Intervention", "text": "The platform is designed to build substantive educator capacity and to generate evidence that distinguishes substantive integration from ceremonial integration." },
-      { "label": "Return to accreditation", "text": "That evidence informs what accreditation standards can reasonably require of institutions, not only of students. This closes the loop back to the accreditation dilemma." }
+      {
+        "label": "Demand",
+        "text": "Accreditation bodies are under pressure to specify how AI should be incorporated into dental curricula (Study 1)."
+      },
+      {
+        "label": "Gap",
+        "text": "An international competency framework has existed since 2022 (Schwendicke et al., 2022), yet curricular implementation remains patchy and supplementary (Aura-Tormos et al., 2026)."
+      },
+      {
+        "label": "Binding constraint",
+        "text": "Study 1 indicates that the limiting factor appears to be educator capacity, not student readiness or technology. Most surveyed faculty report no routine use of AI in assessment, and in some samples fewer than 20% understand machine-learning fundamentals (Study 1, Tier 3)."
+      },
+      {
+        "label": "Institutional risk",
+        "text": "Standards that specify student outcomes without specifying institutional conditions may operate only as exhortation (Study 1 conclusion). Under isomorphic pressure (DiMaggio and Powell, 1983), schools may respond ceremonially: documenting AI integration without changing practice. This is the decoupling of formal structure from activity (Meyer and Rowan, 1977)."
+      },
+      {
+        "label": "Intervention",
+        "text": "The platform is designed to build substantive educator capacity and to generate evidence that distinguishes substantive integration from ceremonial integration."
+      },
+      {
+        "label": "Return to accreditation",
+        "text": "That evidence informs what accreditation standards can reasonably require of institutions, not only of students. This closes the loop back to the accreditation dilemma."
+      }
     ],
     "consequence": "The platform must never reproduce the decoupling it studies. Any feature that could generate documentation without practice (certificates, completion badges, \"evidence packs\" built from self-ratings) is out of scope.",
     "unitOfAnalysis": {
       "intro": "The thesis studies the organisation, not the individual learner (the education–learning distinction in the methodology chapter). The platform therefore works at two levels:",
       "levels": [
-        { "label": "Individual practice", "text": "how one educator uses AI in teaching. This is the entry point." },
-        { "label": "Institutional conditions", "text": "the regulative, normative and cultural-cognitive conditions that enable or constrain that practice (Scott, 2014). This is the analytic focus." }
+        {
+          "label": "Individual practice",
+          "text": "how one educator uses AI in teaching. This is the entry point."
+        },
+        {
+          "label": "Institutional conditions",
+          "text": "the regulative, normative and cultural-cognitive conditions that enable or constrain that practice (Scott, 2014). This is the analytic focus."
+        }
       ],
       "closing": "Individual data are only ever a route to understanding institutional conditions. Aggregated, cohort-level views (Part B) are the research unit."
     },
     "placement": [
-      { "label": "Proposed placement", "text": "Study 7 (faculty development), drawing on Study 1 (scoping review) and the REAL-AI framework paper. [AYMAN TO SUPPLY: confirm placement with supervisors]" },
-      { "label": "Status", "text": "Iteration 0, a conjectural prototype. Studies 2 (interviews) and 3 (survey) are in progress. Their findings must be able to revise the design principles, instruments and scenarios without code changes. This is why all content moves to versioned data files with provenance (A1)." },
-      { "label": "Validation path", "text": "design principles and instrument items go to the Delphi study (Study 5); field use in the pilot (Study 6)." }
+      {
+        "label": "Proposed placement",
+        "text": "Study 7 (faculty development), drawing on Study 1 (scoping review) and the REAL-AI framework paper. [AYMAN TO SUPPLY: confirm placement with supervisors]"
+      },
+      {
+        "label": "Status",
+        "text": "Iteration 0, a conjectural prototype. Studies 2 (interviews) and 3 (survey) are in progress. Their findings must be able to revise the design principles, instruments and scenarios without code changes. This is why all content moves to versioned data files with provenance (A1)."
+      },
+      {
+        "label": "Validation path",
+        "text": "design principles and instrument items go to the Delphi study (Study 5); field use in the pilot (Study 6)."
+      }
     ]
   },
   "commitments": [
-    { "commitment": "Pragmatism: ideas are tested by their consequences in practice", "source": "Dewey (1938); Hoadley and Campos (2022)", "consequence": "Practice evidence is structured as intention → enactment → consequence (A6). Reflection prompts ask what would count as evidence in the educator's own setting." },
-    { "commitment": "Consequential validity", "source": "Messick (1998)", "consequence": "Instruments are judged by what their use leads to, so each output states what it should and should not be used for (A3)." },
-    { "commitment": "Institutional theory: three pillars", "source": "Scott (2014)", "consequence": "A second instrument profiles institutional conditions across regulative, normative and cultural-cognitive pillars (A3)." },
-    { "commitment": "Decoupling: formal structure vs actual activity", "source": "Meyer and Rowan (1977)", "consequence": "No certificates or badges. \"Documented\" and \"enacted\" are kept visibly distinct (A6). One scenario confronts the inspection-pressure dilemma directly (SC3)." },
-    { "commitment": "Isomorphism", "source": "DiMaggio and Powell (1983)", "consequence": "The accreditation bridge (A5) shows that the demand comes from accreditation pressure, and warns against copying \"AI integration\" displays from other schools." },
-    { "commitment": "Boundary object", "source": "Wenger (1998); Star and Griesemer (1989)", "consequence": "The same content is presented to three audiences (educators, programme or quality leads, researchers and examiners), each with a view suited to them (A5, A8)." },
-    { "commitment": "DBR: iterative, theory-generating, documented design decisions", "source": "McKenney and Reeves (2019); Obczovsky et al. (2025)", "consequence": "Conjecture map, design principles with provenance, an iteration log, and content versioning (A1, A9)." },
-    { "commitment": "REAL-AI framework", "source": "Khalifah et al. (REAL-AI paper, under review)", "consequence": "The four pillars structure the practice instrument and the scenarios. Pillar definitions must be the paper's verbatim definitions (A1)." }
+    {
+      "commitment": "Pragmatism: ideas are tested by their consequences in practice",
+      "source": "Dewey (1938); Hoadley and Campos (2022)",
+      "consequence": "Practice evidence is structured as intention → enactment → consequence (A6). Reflection prompts ask what would count as evidence in the educator's own setting."
+    },
+    {
+      "commitment": "Consequential validity",
+      "source": "Messick (1998)",
+      "consequence": "Instruments are judged by what their use leads to, so each output states what it should and should not be used for (A3)."
+    },
+    {
+      "commitment": "Institutional theory: three pillars",
+      "source": "Scott (2014)",
+      "consequence": "A second instrument profiles institutional conditions across regulative, normative and cultural-cognitive pillars (A3)."
+    },
+    {
+      "commitment": "Decoupling: formal structure vs actual activity",
+      "source": "Meyer and Rowan (1977)",
+      "consequence": "No certificates or badges. \"Documented\" and \"enacted\" are kept visibly distinct (A6). One scenario confronts the inspection-pressure dilemma directly (SC3)."
+    },
+    {
+      "commitment": "Isomorphism",
+      "source": "DiMaggio and Powell (1983)",
+      "consequence": "The accreditation bridge (A5) shows that the demand comes from accreditation pressure, and warns against copying \"AI integration\" displays from other schools."
+    },
+    {
+      "commitment": "Boundary object",
+      "source": "Wenger (1998); Star and Griesemer (1989)",
+      "consequence": "The same content is presented to three audiences (educators, programme or quality leads, researchers and examiners), each with a view suited to them (A5, A8)."
+    },
+    {
+      "commitment": "DBR: iterative, theory-generating, documented design decisions",
+      "source": "McKenney and Reeves (2019); Obczovsky et al. (2025)",
+      "consequence": "Conjecture map, design principles with provenance, an iteration log, and content versioning (A1, A9)."
+    },
+    {
+      "commitment": "REAL-AI framework",
+      "source": "Khalifah et al. (REAL-AI paper, under review)",
+      "consequence": "The four pillars structure the practice instrument and the scenarios. Pillar definitions must be the paper's verbatim definitions (A1)."
+    }
   ],
   "limitations": [
     "Both instruments are draft self-report measures. Validation is planned through expert review (Delphi) and psychometric testing.",
@@ -48,5 +113,12 @@
     "The AI coach can be wrong. Its use in a platform about critical AI use is deliberate, but it carries the risk of the automation bias the platform warns against. User ratings of coach feedback are collected to examine this.",
     "Arabic text is a draft translation pending expert review.",
     "In this iteration, no data leave the browser except anonymous score summaries and reflections sent to generate feedback."
+  ],
+  "provenance": [
+    {
+      "type": "researcher-constructed",
+      "ref": "v3 brief, Sections 1, 2 and 8.6",
+      "note": "Positioning, philosophical commitments and limitations as supplied in the brief"
+    }
   ]
 }

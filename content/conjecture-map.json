@@ -1,28 +1,80 @@
 {
+  "id": "conjecture-map",
   "version": "0.3.0",
   "status": "draft",
+  "provenance": [
+    {
+      "type": "theory",
+      "ref": "Sandoval (2014)",
+      "note": "Conjecture-mapping approach"
+    },
+    {
+      "type": "researcher-constructed",
+      "ref": "v3 brief, Section 4",
+      "note": "Iteration 0 conjectures"
+    }
+  ],
   "iteration": "Iteration 0",
   "note": "Conjecture map from the v3 brief, Section 4, following the conjecture-mapping approach (Sandoval, 2014).",
   "ar_status": "not applicable — English-only rationale page",
   "highLevel": "If dental educators engage with evidence-grounded AI dilemmas and record how their practice actually changes, within a structure that makes institutional conditions visible, then programmes will develop substantive (not ceremonial) AI-integration capacity that accreditation can meaningfully recognise.",
   "embodiment": [
-    { "id": "E1", "text": "Two-level profile: individual practice (REAL-AI) and institutional conditions (Scott's pillars)." },
-    { "id": "E2", "text": "Evidence-anchored scenarios, each with a visible provenance note." },
-    { "id": "E3", "text": "Reflection before rating." },
-    { "id": "E4", "text": "A reflexive AI coach that is transparent about its limits and invites critique of its own output." },
-    { "id": "E5", "text": "Practice evidence structured as intention → enactment → consequence, with no certificates." },
-    { "id": "E6", "text": "An accreditation bridge showing where the demand comes from." }
+    {
+      "id": "E1",
+      "text": "Two-level profile: individual practice (REAL-AI) and institutional conditions (Scott's pillars)."
+    },
+    {
+      "id": "E2",
+      "text": "Evidence-anchored scenarios, each with a visible provenance note."
+    },
+    {
+      "id": "E3",
+      "text": "Reflection before rating."
+    },
+    {
+      "id": "E4",
+      "text": "A reflexive AI coach that is transparent about its limits and invites critique of its own output."
+    },
+    {
+      "id": "E5",
+      "text": "Practice evidence structured as intention → enactment → consequence, with no certificates."
+    },
+    {
+      "id": "E6",
+      "text": "An accreditation bridge showing where the demand comes from."
+    }
   ],
   "mediating": [
-    { "id": "M1", "text": "Educators articulate their own reasoning before seeing expert judgement (E3)." },
-    { "id": "M2", "text": "Educators distinguish what they can change from what depends on institutional conditions (E1, E4)." },
-    { "id": "M3", "text": "Educators critically evaluate AI output, including the coach's (E2, E4)." },
-    { "id": "M4", "text": "Educators plan, enact and review concrete changes rather than only documenting intentions (E5)." }
+    {
+      "id": "M1",
+      "text": "Educators articulate their own reasoning before seeing expert judgement (E3)."
+    },
+    {
+      "id": "M2",
+      "text": "Educators distinguish what they can change from what depends on institutional conditions (E1, E4)."
+    },
+    {
+      "id": "M3",
+      "text": "Educators critically evaluate AI output, including the coach's (E2, E4)."
+    },
+    {
+      "id": "M4",
+      "text": "Educators plan, enact and review concrete changes rather than only documenting intentions (E5)."
+    }
   ],
   "outcomes": [
-    { "id": "O1", "text": "Enacted changes to teaching or assessment practice, with consequences recorded." },
-    { "id": "O2", "text": "Shifts in the institutional-conditions profile at cohort level over time." },
-    { "id": "O3", "text": "Reduced gap between documented and enacted AI integration (decoupling probe)." }
+    {
+      "id": "O1",
+      "text": "Enacted changes to teaching or assessment practice, with consequences recorded."
+    },
+    {
+      "id": "O2",
+      "text": "Shifts in the institutional-conditions profile at cohort level over time."
+    },
+    {
+      "id": "O3",
+      "text": "Reduced gap between documented and enacted AI integration (decoupling probe)."
+    }
   ],
   "outcomesNote": "What would count as the conjecture holding; to be operationalised in Studies 6–7.",
   "conjectures": "Each pairs an embodiment and a process with an outcome: E3→M1, E5→M4→O1, and E1→M2→O2. These are the questions the pilot must answer, and the iteration log records evidence for or against each."

@@ -2,6 +2,7 @@
 
 Every change to the files in `content/` is recorded here: the version, what changed, and why (the evidence).
 Status values: `draft`, `delphi-reviewed`, `validated`. All content is currently `draft`.
+Scenario options and conjecture-map elements (E1–E6, M1–M4, O1–O3) are parts of their parent object and inherit its `version`, `status` and `provenance`.
 
 ## 0.3.0 — Iteration 0 (v3)
 

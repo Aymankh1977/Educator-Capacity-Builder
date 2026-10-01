@@ -9,7 +9,17 @@
         "en": "Classroom and clinic",
         "ar": "القاعة الدراسية والعيادة"
       },
-      "ar_status": "draft — needs human review"
+      "ar_status": "draft — needs human review",
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v3 brief, A4",
+          "note": {
+            "en": "Grouping set in the v3 design brief.",
+            "ar": "تجميع حدّده موجز التصميم للإصدار الثالث."
+          }
+        }
+      ]
     },
     {
       "id": "programme",
@@ -19,7 +29,17 @@
         "en": "Programme and institution",
         "ar": "البرنامج والمؤسسة"
       },
-      "ar_status": "draft — needs human review"
+      "ar_status": "draft — needs human review",
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v3 brief, A4",
+          "note": {
+            "en": "Grouping set in the v3 design brief.",
+            "ar": "تجميع حدّده موجز التصميم للإصدار الثالث."
+          }
+        }
+      ]
     }
   ],
   "scenarios": [
