@@ -33,7 +33,6 @@ export default function Accreditation() {
         })}
       </ul>
 
-      <p className="saudi"><strong>{page.saudi.label[lang]}</strong> <Emph text={page.saudi.text[lang]} /></p>
 
       <h2 className="result-title">{page.platformsTitle[lang]}</h2>
       <ul className="platform-list">

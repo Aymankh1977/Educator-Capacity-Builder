@@ -21,6 +21,10 @@ Each entry records what changed in the design, why, and any evidence for or agai
 - **A9 Research documentation.** New `research/` folder: conjecture map, design requirements, design principles, instrument codebook and citation register (generated from `content/` by `npm run research:docs`), this iteration log, and the Part B ethics and data design (`ethics-and-data.md`, design only; no server-side storage).
 - **A10 Home page.** Hero reframed around accreditation and educator capacity ("Building the capacity that accreditation assumes"), with the REAL letter animation kept, a link to the accreditation page under the pillars, and three steps: profile your practice and conditions; work through evidence-based dilemmas; log what you change, and what happens.
 
+### Revisions within Iteration 0
+
+- **0.3.1 (2 October 2026).** Accreditation page: removed the Saudi GDC-alignment paragraph at Ayman's request (it did not convey meaning), departing from brief requirement A5; added the GDC and NCAAA platform URLs.
+
 ### Evidence on the conjectures
 
 None yet. Iteration 0 has not been used in the field. The pilot (Study 6) and Study 7 are expected to provide evidence for or against E3→M1, E5→M4→O1 and E1→M2→O2.

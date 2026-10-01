@@ -1,9 +1,12 @@
 {
   "id": "accreditation-bridge",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "status": "draft",
-  "note": "Text from the v3 brief, Section 8.3. Themes only: no accreditation clause numbers. For Saudi programmes the phrase is GDC-alignment, never GDC accreditation.",
-  "title": { "en": "Why this matters for accreditation", "ar": "لماذا يهمّ هذا للاعتماد" },
+  "note": "Text from the v3 brief, Section 8.3, revised in 0.3.1 (see CHANGELOG). Themes only: no accreditation clause numbers.",
+  "title": {
+    "en": "Why this matters for accreditation",
+    "ar": "لماذا يهمّ هذا للاعتماد"
+  },
   "intro": [
     {
       "en": "Accreditation standards increasingly expect dental schools to teach with and about AI. Research suggests that the main limiting factor is not students or technology but educators' capacity, and the conditions institutions create for it.",
@@ -18,42 +21,95 @@
       "ar": "صُمّم هذا الاستوديو للمساعدة على سدّ هذه الفجوة: أي لبناء قدرات تظهر في الممارسة، لا على الورق فحسب."
     }
   ],
-  "pillarsTitle": { "en": "How the REAL-AI pillars relate to accreditation themes", "ar": "كيف ترتبط ركائز REAL-AI بمحاور الاعتماد" },
-  "pillarThemes": [
-    { "pillar": "R", "text": { "en": "curriculum design and quality assurance: deliberate, reviewed decisions about where AI belongs.", "ar": "تصميم المنهج وضمان الجودة: قرارات مدروسة تخضع للمراجعة بشأن مواضع استخدام الذكاء الاصطناعي." } },
-    { "pillar": "E", "text": { "en": "fairness in assessment and learner support.", "ar": "العدالة في التقييم وفي دعم المتعلّمين." } },
-    { "pillar": "A", "text": { "en": "patient safety, clinical assessment validity and graduate outcomes.", "ar": "سلامة المرضى، وصدق التقييم السريري، ومخرجات الخريجين." } },
-    { "pillar": "L", "text": { "en": "student engagement and staff development.", "ar": "مشاركة الطلاب وتطوير أعضاء هيئة التدريس." } }
-  ],
-  "saudi": {
-    "label": { "en": "For Saudi programmes:", "ar": "للبرامج السعودية:" },
-    "text": {
-      "en": "this platform supports *GDC-alignment* and NCAAA programme accreditation. Overseas schools cannot be accredited directly by the GDC.",
-      "ar": "تدعم هذه المنصة *المواءمة مع معايير المجلس العام لطب الأسنان (GDC-alignment)* والاعتماد البرامجي من المركز الوطني للتقويم والاعتماد الأكاديمي (NCAAA). ولا يمكن أن تحصل الكليات الواقعة خارج المملكة المتحدة على اعتماد مباشر من المجلس العام لطب الأسنان."
-    }
+  "pillarsTitle": {
+    "en": "How the REAL-AI pillars relate to accreditation themes",
+    "ar": "كيف ترتبط ركائز REAL-AI بمحاور الاعتماد"
   },
-  "platformsTitle": { "en": "Related DentEdTech platforms", "ar": "منصات DentEdTech ذات الصلة" },
+  "pillarThemes": [
+    {
+      "pillar": "R",
+      "text": {
+        "en": "curriculum design and quality assurance: deliberate, reviewed decisions about where AI belongs.",
+        "ar": "تصميم المنهج وضمان الجودة: قرارات مدروسة تخضع للمراجعة بشأن مواضع استخدام الذكاء الاصطناعي."
+      }
+    },
+    {
+      "pillar": "E",
+      "text": {
+        "en": "fairness in assessment and learner support.",
+        "ar": "العدالة في التقييم وفي دعم المتعلّمين."
+      }
+    },
+    {
+      "pillar": "A",
+      "text": {
+        "en": "patient safety, clinical assessment validity and graduate outcomes.",
+        "ar": "سلامة المرضى، وصدق التقييم السريري، ومخرجات الخريجين."
+      }
+    },
+    {
+      "pillar": "L",
+      "text": {
+        "en": "student engagement and staff development.",
+        "ar": "مشاركة الطلاب وتطوير أعضاء هيئة التدريس."
+      }
+    }
+  ],
+  "platformsTitle": {
+    "en": "Related DentEdTech platforms",
+    "ar": "منصات DentEdTech ذات الصلة"
+  },
   "platforms": [
-    { "name": { "en": "DentEdTech GDC platform", "ar": "منصة DentEdTech الخاصة بمعايير GDC" }, "url": "[AYMAN TO SUPPLY: current URL]" },
-    { "name": { "en": "DentEdTech NCAAA platform", "ar": "منصة DentEdTech الخاصة باعتماد NCAAA" }, "url": "[AYMAN TO SUPPLY: current URL]" }
+    {
+      "name": {
+        "en": "DentEdTech GDC platform",
+        "ar": "منصة DentEdTech الخاصة بمعايير GDC"
+      },
+      "url": "https://gdc.dentedtech.com"
+    },
+    {
+      "name": {
+        "en": "DentEdTech NCAAA platform",
+        "ar": "منصة DentEdTech الخاصة باعتماد NCAAA"
+      },
+      "url": "https://ncaaa.dentedtech.com"
+    }
   ],
   "caution": {
-    "label": { "en": "Important:", "ar": "مهم:" },
+    "label": {
+      "en": "Important:",
+      "ar": "مهم:"
+    },
     "text": {
       "en": "this studio supports professional development. Its outputs are not accreditation evidence and should not be submitted as such.",
       "ar": "يدعم هذا الاستوديو التطوير المهني. ومخرجاته ليست أدلةً للاعتماد، ولا ينبغي تقديمها بوصفها كذلك."
     }
   },
   "provenance": [
-    { "type": "study1", "ref": "DR1", "note": {
-      "en": "Based on Study 1 (scoping review of AI in dental education): educator capacity, not technology, appears to be the binding constraint.",
-      "ar": "استنادًا إلى الدراسة 1 (مراجعة استكشافية للذكاء الاصطناعي في تعليم طب الأسنان): يبدو أن قدرات المعلّمين، لا التقنية، هي القيد الحاكم." } },
-    { "type": "study1", "ref": "DR2", "note": {
-      "en": "Based on Study 1's conclusion: standards that specify student outcomes without institutional conditions act as exhortation.",
-      "ar": "استنادًا إلى خلاصة الدراسة 1: المعايير التي تحدد مخرجات الطلاب دون تحديد الظروف المؤسسية تعمل بوصفها حثًّا فحسب." } },
-    { "type": "theory", "ref": "Meyer and Rowan (1977)", "note": {
-      "en": "Institutional theory: the decoupling of formal structure from actual activity (Meyer and Rowan, 1977).",
-      "ar": "النظرية المؤسسية: الانفصال بين البنية الرسمية والنشاط الفعلي (Meyer وRowan، 1977)." } }
+    {
+      "type": "study1",
+      "ref": "DR1",
+      "note": {
+        "en": "Based on Study 1 (scoping review of AI in dental education): educator capacity, not technology, appears to be the binding constraint.",
+        "ar": "استنادًا إلى الدراسة 1 (مراجعة استكشافية للذكاء الاصطناعي في تعليم طب الأسنان): يبدو أن قدرات المعلّمين، لا التقنية، هي القيد الحاكم."
+      }
+    },
+    {
+      "type": "study1",
+      "ref": "DR2",
+      "note": {
+        "en": "Based on Study 1's conclusion: standards that specify student outcomes without institutional conditions act as exhortation.",
+        "ar": "استنادًا إلى خلاصة الدراسة 1: المعايير التي تحدد مخرجات الطلاب دون تحديد الظروف المؤسسية تعمل بوصفها حثًّا فحسب."
+      }
+    },
+    {
+      "type": "theory",
+      "ref": "Meyer and Rowan (1977)",
+      "note": {
+        "en": "Institutional theory: the decoupling of formal structure from actual activity (Meyer and Rowan, 1977).",
+        "ar": "النظرية المؤسسية: الانفصال بين البنية الرسمية والنشاط الفعلي (Meyer وRowan، 1977)."
+      }
+    }
   ],
   "ar_status": "draft — needs human review"
 }

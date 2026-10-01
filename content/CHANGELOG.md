@@ -4,6 +4,10 @@ Every change to the files in `content/` is recorded here: the version, what chan
 Status values: `draft`, `delphi-reviewed`, `validated`. All content is currently `draft`.
 Scenario options and conjecture-map elements (E1–E6, M1–M4, O1–O3) are parts of their parent object and inherit its `version`, `status` and `provenance`.
 
+## 0.3.1 — Iteration 0 revision
+
+- **Accreditation bridge (`accreditation.json` 0.3.1).** Removed the "For Saudi programmes" paragraph (GDC-alignment and NCAAA statement) at Ayman's request: it did not convey meaning to readers. This departs from the v3 brief's A5 requirement to state the GDC-alignment framing. Supplied the platform URLs (gdc.dentedtech.com, ncaaa.dentedtech.com), replacing the placeholders.
+
 ## 0.3.0 — Iteration 0 (v3)
 
 - **Architecture.** Framework content moved out of `lib/realai.js` into versioned JSON files in `content/`. Every object now carries `id`, `version`, `status`, `provenance` and `ar_status`. Why: DR8 (design must be revisable from Studies 2–3 and the Delphi without code changes); DP6.
