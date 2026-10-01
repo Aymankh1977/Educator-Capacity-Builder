@@ -1,0 +1,114 @@
+{
+  "version": "0.3.0",
+  "note": "REAL-AI pillars. Descriptions are working definitions pending alignment with the published framework (see realai-definitions.md).",
+  "pillars": [
+    {
+      "id": "R",
+      "key": "R",
+      "version": "0.3.0",
+      "status": "draft",
+      "definitionStatus": "working",
+      "color": "#2E6E73",
+      "name": {
+        "en": "Reflective Integration",
+        "ar": "التكامل التأملي"
+      },
+      "desc": {
+        "en": "Using AI deliberately: questioning when it adds value and checking what it produces.",
+        "ar": "استخدام الذكاء الاصطناعي عن وعي، مع التساؤل عن قيمته المضافة والتحقق من مخرجاته."
+      },
+      "provenance": [
+        {
+          "type": "realai-paper",
+          "ref": "Khalifah et al. (REAL-AI paper, under review)",
+          "note": {
+            "en": "One of the four pillars of the REAL-AI framework. The description shown is a working definition, pending alignment with the published framework.",
+            "ar": "إحدى الركائز الأربع لإطار REAL-AI. الوصف المعروض تعريف عملي مؤقت، بانتظار مواءمته مع الإطار المنشور."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "E",
+      "key": "E",
+      "version": "0.3.0",
+      "status": "draft",
+      "definitionStatus": "working",
+      "color": "#6C4F8E",
+      "name": {
+        "en": "Equity by Design",
+        "ar": "الإنصاف بالتصميم"
+      },
+      "desc": {
+        "en": "Designing AI use so that access, language and bias do not disadvantage any student or patient group.",
+        "ar": "تصميم استخدام الذكاء الاصطناعي بحيث لا تُلحق فرص الوصول أو اللغة أو التحيّز ضررًا بأي فئة من الطلاب أو المرضى."
+      },
+      "provenance": [
+        {
+          "type": "realai-paper",
+          "ref": "Khalifah et al. (REAL-AI paper, under review)",
+          "note": {
+            "en": "One of the four pillars of the REAL-AI framework. The description shown is a working definition, pending alignment with the published framework.",
+            "ar": "إحدى الركائز الأربع لإطار REAL-AI. الوصف المعروض تعريف عملي مؤقت، بانتظار مواءمته مع الإطار المنشور."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "A",
+      "key": "A",
+      "version": "0.3.0",
+      "status": "draft",
+      "definitionStatus": "working",
+      "color": "#B07F24",
+      "name": {
+        "en": "Authentic Clinical Alignment",
+        "ar": "المواءمة السريرية الأصيلة"
+      },
+      "desc": {
+        "en": "Keeping AI-supported learning tied to real clinical judgement, patient safety and valid assessment.",
+        "ar": "إبقاء التعلّم المدعوم بالذكاء الاصطناعي مرتبطًا بالحكم السريري الحقيقي وسلامة المرضى والتقييم الصادق."
+      },
+      "provenance": [
+        {
+          "type": "realai-paper",
+          "ref": "Khalifah et al. (REAL-AI paper, under review)",
+          "note": {
+            "en": "One of the four pillars of the REAL-AI framework. The description shown is a working definition, pending alignment with the published framework.",
+            "ar": "إحدى الركائز الأربع لإطار REAL-AI. الوصف المعروض تعريف عملي مؤقت، بانتظار مواءمته مع الإطار المنشور."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "L",
+      "key": "L",
+      "version": "0.3.0",
+      "status": "draft",
+      "definitionStatus": "working",
+      "color": "#3C7650",
+      "name": {
+        "en": "Learning-Centred Partnership",
+        "ar": "الشراكة المتمحورة حول التعلّم"
+      },
+      "desc": {
+        "en": "Working with students on how AI is used, so it strengthens learning rather than replacing it.",
+        "ar": "العمل مع الطلاب على كيفية استخدام الذكاء الاصطناعي بحيث يعزّز التعلّم ولا يحلّ محلّه."
+      },
+      "provenance": [
+        {
+          "type": "realai-paper",
+          "ref": "Khalifah et al. (REAL-AI paper, under review)",
+          "note": {
+            "en": "One of the four pillars of the REAL-AI framework. The description shown is a working definition, pending alignment with the published framework.",
+            "ar": "إحدى الركائز الأربع لإطار REAL-AI. الوصف المعروض تعريف عملي مؤقت، بانتظار مواءمته مع الإطار المنشور."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    }
+  ]
+}

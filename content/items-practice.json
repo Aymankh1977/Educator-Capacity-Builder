@@ -1,0 +1,510 @@
+{
+  "instrument": {
+    "id": "practice",
+    "version": "0.3.0",
+    "status": "draft",
+    "name": {
+      "en": "Practice (REAL-AI)",
+      "ar": "الممارسة (REAL-AI)"
+    },
+    "scale": {
+      "min": 1,
+      "max": 5,
+      "en": "1 = strongly disagree, 5 = strongly agree",
+      "ar": "1 = لا أوافق بشدة، 5 = أوافق بشدة"
+    },
+    "provenance": [
+      {
+        "type": "researcher-constructed",
+        "ref": "v1",
+        "note": {
+          "en": "Sixteen face-valid items drafted for v1 of this studio, four per REAL-AI pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+          "ar": "ستة عشر بندًا ذا صدق ظاهري صيغت في الإصدار الأول من الاستوديو، أربعة لكل ركيزة من ركائز REAL-AI. لم تخضع بعد لمراجعة الخبراء، ومن المقرر عرضها في دراسة دلفي (الدراسة 5)."
+        }
+      }
+    ],
+    "ar_status": "draft — needs human review"
+  },
+  "items": [
+    {
+      "id": "R1",
+      "pillar": "R",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I decide deliberately whether AI adds value before using it in a teaching or assessment task.",
+        "ar": "أقرّر بوعي ما إذا كان الذكاء الاصطناعي يضيف قيمة قبل استخدامه في مهمة تدريسية أو تقييمية."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Reflective Integration pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «التكامل التأملي». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Reflective Integration",
+          "note": {
+            "en": "Structured by the Reflective Integration pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «التكامل التأملي» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "R2",
+      "pillar": "R",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I review AI-generated content for accuracy before sharing it with students.",
+        "ar": "أراجع المحتوى المُولَّد بالذكاء الاصطناعي للتحقق من دقته قبل مشاركته مع الطلاب."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Reflective Integration pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «التكامل التأملي». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Reflective Integration",
+          "note": {
+            "en": "Structured by the Reflective Integration pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «التكامل التأملي» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "R3",
+      "pillar": "R",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I can explain to students when and why I used AI in preparing material.",
+        "ar": "أستطيع أن أشرح للطلاب متى استخدمت الذكاء الاصطناعي في إعداد المواد ولماذا."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Reflective Integration pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «التكامل التأملي». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Reflective Integration",
+          "note": {
+            "en": "Structured by the Reflective Integration pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «التكامل التأملي» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "R4",
+      "pillar": "R",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I reflect on how AI use changes what students actually learn.",
+        "ar": "أتأمّل في كيفية تغيير استخدام الذكاء الاصطناعي لما يتعلّمه الطلاب فعليًا."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Reflective Integration pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «التكامل التأملي». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Reflective Integration",
+          "note": {
+            "en": "Structured by the Reflective Integration pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «التكامل التأملي» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "E1",
+      "pillar": "E",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I consider whether all students have equal access to the AI tools I expect them to use.",
+        "ar": "أتحقق من أن جميع الطلاب لديهم فرص متساوية للوصول إلى أدوات الذكاء الاصطناعي التي أتوقع منهم استخدامها."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Equity by Design pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «الإنصاف بالتصميم». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Equity by Design",
+          "note": {
+            "en": "Structured by the Equity by Design pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «الإنصاف بالتصميم» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "E2",
+      "pillar": "E",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I check AI outputs for bias related to language, culture, gender or patient population.",
+        "ar": "أفحص مخرجات الذكاء الاصطناعي بحثًا عن تحيّز يتعلق باللغة أو الثقافة أو الجنس أو فئات المرضى."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Equity by Design pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «الإنصاف بالتصميم». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Equity by Design",
+          "note": {
+            "en": "Structured by the Equity by Design pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «الإنصاف بالتصميم» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "E3",
+      "pillar": "E",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I adapt AI-supported activities for students with different language backgrounds or learning needs.",
+        "ar": "أكيّف الأنشطة المدعومة بالذكاء الاصطناعي للطلاب ذوي الخلفيات اللغوية أو احتياجات التعلّم المختلفة."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Equity by Design pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «الإنصاف بالتصميم». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Equity by Design",
+          "note": {
+            "en": "Structured by the Equity by Design pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «الإنصاف بالتصميم» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "E4",
+      "pillar": "E",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I know my institution's rules on student data and AI tools.",
+        "ar": "أعرف أنظمة مؤسستي المتعلقة ببيانات الطلاب وأدوات الذكاء الاصطناعي."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Equity by Design pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «الإنصاف بالتصميم». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Equity by Design",
+          "note": {
+            "en": "Structured by the Equity by Design pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «الإنصاف بالتصميم» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "A1",
+      "pillar": "A",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "My AI-supported activities connect to real clinical decisions students will face.",
+        "ar": "ترتبط أنشطتي المدعومة بالذكاء الاصطناعي بقرارات سريرية حقيقية سيواجهها الطلاب."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Authentic Clinical Alignment pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «المواءمة السريرية الأصيلة». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Authentic Clinical Alignment",
+          "note": {
+            "en": "Structured by the Authentic Clinical Alignment pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «المواءمة السريرية الأصيلة» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "A2",
+      "pillar": "A",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I can judge whether an AI output would be safe to apply to a patient.",
+        "ar": "أستطيع الحكم على ما إذا كان تطبيق مخرجات الذكاء الاصطناعي على المريض آمنًا."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Authentic Clinical Alignment pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «المواءمة السريرية الأصيلة». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Authentic Clinical Alignment",
+          "note": {
+            "en": "Structured by the Authentic Clinical Alignment pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «المواءمة السريرية الأصيلة» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "A3",
+      "pillar": "A",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I design assessments that stay valid when students have access to AI.",
+        "ar": "أصمّم تقييمات تبقى صادقة حتى عندما يتاح للطلاب استخدام الذكاء الاصطناعي."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Authentic Clinical Alignment pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «المواءمة السريرية الأصيلة». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Authentic Clinical Alignment",
+          "note": {
+            "en": "Structured by the Authentic Clinical Alignment pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «المواءمة السريرية الأصيلة» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "A4",
+      "pillar": "A",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I link AI-supported learning to programme learning outcomes and accreditation standards.",
+        "ar": "أربط التعلّم المدعوم بالذكاء الاصطناعي بمخرجات تعلّم البرنامج ومعايير الاعتماد."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Authentic Clinical Alignment pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «المواءمة السريرية الأصيلة». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Authentic Clinical Alignment",
+          "note": {
+            "en": "Structured by the Authentic Clinical Alignment pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «المواءمة السريرية الأصيلة» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "L1",
+      "pillar": "L",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I discuss acceptable AI use openly with students rather than only prohibiting it.",
+        "ar": "أناقش مع الطلاب بصراحة الاستخدام المقبول للذكاء الاصطناعي بدلًا من الاكتفاء بمنعه."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Learning-Centred Partnership pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «الشراكة المتمحورة حول التعلّم». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Learning-Centred Partnership",
+          "note": {
+            "en": "Structured by the Learning-Centred Partnership pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «الشراكة المتمحورة حول التعلّم» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "L2",
+      "pillar": "L",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I involve students in setting expectations for AI use in my module.",
+        "ar": "أُشرك الطلاب في وضع توقعات استخدام الذكاء الاصطناعي في مقرري."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Learning-Centred Partnership pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «الشراكة المتمحورة حول التعلّم». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Learning-Centred Partnership",
+          "note": {
+            "en": "Structured by the Learning-Centred Partnership pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «الشراكة المتمحورة حول التعلّم» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "L3",
+      "pillar": "L",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I use AI to give students more or better feedback, not to replace my judgement.",
+        "ar": "أستخدم الذكاء الاصطناعي لتقديم تغذية راجعة أكثر أو أفضل للطلاب، لا ليحلّ محل حكمي المهني."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Learning-Centred Partnership pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «الشراكة المتمحورة حول التعلّم». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Learning-Centred Partnership",
+          "note": {
+            "en": "Structured by the Learning-Centred Partnership pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «الشراكة المتمحورة حول التعلّم» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "L4",
+      "pillar": "L",
+      "version": "0.3.0",
+      "status": "draft",
+      "reverse": false,
+      "text": {
+        "en": "I model critical use of AI in front of students.",
+        "ar": "أُظهر أمام الطلاب نموذجًا للاستخدام الناقد للذكاء الاصطناعي."
+      },
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Drafted for v1 of this studio as a face-valid item for the Learning-Centred Partnership pillar. Not yet reviewed by experts; planned for Delphi review (Study 5).",
+            "ar": "صيغ هذا البند في الإصدار الأول من الاستوديو بوصفه بندًا ذا صدق ظاهري لركيزة «الشراكة المتمحورة حول التعلّم». لم يخضع بعد لمراجعة الخبراء، ومن المقرر عرضه في دراسة دلفي (الدراسة 5)."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Learning-Centred Partnership",
+          "note": {
+            "en": "Structured by the Learning-Centred Partnership pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «الشراكة المتمحورة حول التعلّم» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    }
+  ]
+}

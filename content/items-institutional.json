@@ -1,0 +1,113 @@
+{
+  "instrument": {
+    "id": "institutional",
+    "version": "0.3.0",
+    "status": "draft",
+    "name": { "en": "Institutional conditions", "ar": "الظروف المؤسسية" },
+    "scale": { "min": 1, "max": 5, "en": "1 = strongly disagree, 5 = strongly agree", "ar": "1 = لا أوافق بشدة، 5 = أوافق بشدة" },
+    "reverseScoring": "Reverse-scored items are rescored as 6 minus the response before pillar means are calculated. The decoupling probe is reported separately and is not part of any pillar mean.",
+    "alignment": "[AYMAN TO SUPPLY: Study 3 survey items] Align wording with the Study 3 survey constructs where they overlap, so that data are comparable across studies.",
+    "provenance": [
+      { "type": "theory", "ref": "Scott (2014)", "note": {
+        "en": "Profiles the regulative, normative and cultural-cognitive pillars of institutional conditions (Scott, 2014).",
+        "ar": "يرسم صورة للركائز التنظيمية والمعيارية والثقافية-المعرفية للظروف المؤسسية (Scott، 2014)." } },
+      { "type": "study1", "ref": "DR2", "note": {
+        "en": "Based on Study 1 (scoping review of AI in dental education): standards that specify student outcomes without institutional conditions act as exhortation, so institutional conditions are profiled alongside individual practice.",
+        "ar": "استنادًا إلى الدراسة 1 (مراجعة استكشافية للذكاء الاصطناعي في تعليم طب الأسنان): المعايير التي تحدد مخرجات الطلاب دون تحديد الظروف المؤسسية تعمل بوصفها حثًّا فحسب، ولذلك تُرصد الظروف المؤسسية إلى جانب الممارسة الفردية." } }
+    ],
+    "ar_status": "draft — needs human review"
+  },
+  "pillars": [
+    {
+      "id": "regulative", "version": "0.3.0", "status": "draft", "color": "#3F5E8C",
+      "name": { "en": "Regulative", "ar": "التنظيمية" },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "The regulative pillar of institutional conditions (Scott, 2014).", "ar": "الركيزة التنظيمية للظروف المؤسسية (Scott، 2014)." } }],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "normative", "version": "0.3.0", "status": "draft", "color": "#9A4F3A",
+      "name": { "en": "Normative", "ar": "المعيارية" },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "The normative pillar of institutional conditions (Scott, 2014).", "ar": "الركيزة المعيارية للظروف المؤسسية (Scott، 2014)." } }],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "cultural-cognitive", "version": "0.3.0", "status": "draft", "color": "#5F6B2D",
+      "name": { "en": "Cultural-cognitive", "ar": "الثقافية-المعرفية" },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "The cultural-cognitive pillar of institutional conditions (Scott, 2014).", "ar": "الركيزة الثقافية-المعرفية للظروف المؤسسية (Scott، 2014)." } }],
+      "ar_status": "draft — needs human review"
+    }
+  ],
+  "items": [
+    {
+      "id": "IC-R1", "pillar": "regulative", "version": "0.3.0", "status": "draft", "reverse": false,
+      "text": { "en": "My programme has a written position on how AI may be used in teaching and assessment.", "ar": "لدى برنامجي موقف مكتوب بشأن كيفية استخدام الذكاء الاصطناعي في التدريس والتقييم." },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "Written to profile the regulative pillar (Scott, 2014).", "ar": "صيغ لرصد الركيزة التنظيمية (Scott، 2014)." } }, { "type": "study1", "ref": "DR2", "note": { "en": "Profiles institutional conditions alongside practice (Study 1 conclusion).", "ar": "يرصد الظروف المؤسسية إلى جانب الممارسة (خلاصة الدراسة 1)." } }],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "IC-R2", "pillar": "regulative", "version": "0.3.0", "status": "draft", "reverse": false,
+      "text": { "en": "I know what our accreditor currently expects regarding AI in the curriculum.", "ar": "أعرف ما تتوقعه جهة الاعتماد لبرنامجنا حاليًا بشأن الذكاء الاصطناعي في المنهج." },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "Written to profile the regulative pillar (Scott, 2014).", "ar": "صيغ لرصد الركيزة التنظيمية (Scott، 2014)." } }, { "type": "study1", "ref": "DR2", "note": { "en": "Profiles institutional conditions alongside practice (Study 1 conclusion).", "ar": "يرصد الظروف المؤسسية إلى جانب الممارسة (خلاصة الدراسة 1)." } }],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "IC-R3", "pillar": "regulative", "version": "0.3.0", "status": "draft", "reverse": false,
+      "text": { "en": "Our assessment regulations state how students' use of AI should be declared and treated.", "ar": "تنصّ لوائح التقييم لدينا على كيفية إفصاح الطلاب عن استخدامهم للذكاء الاصطناعي وكيفية التعامل معه." },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "Written to profile the regulative pillar (Scott, 2014).", "ar": "صيغ لرصد الركيزة التنظيمية (Scott، 2014)." } }, { "type": "study1", "ref": "DR2", "note": { "en": "Profiles institutional conditions alongside practice (Study 1 conclusion).", "ar": "يرصد الظروف المؤسسية إلى جانب الممارسة (خلاصة الدراسة 1)." } }],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "IC-N1", "pillar": "normative", "version": "0.3.0", "status": "draft", "reverse": false,
+      "text": { "en": "Colleagues in my department discuss how AI should and should not be used in teaching.", "ar": "يناقش الزملاء في قسمي كيف ينبغي استخدام الذكاء الاصطناعي في التدريس وكيف لا ينبغي." },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "Written to profile the normative pillar (Scott, 2014).", "ar": "صيغ لرصد الركيزة المعيارية (Scott، 2014)." } }, { "type": "study1", "ref": "DR2", "note": { "en": "Profiles institutional conditions alongside practice (Study 1 conclusion).", "ar": "يرصد الظروف المؤسسية إلى جانب الممارسة (خلاصة الدراسة 1)." } }],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "IC-N2", "pillar": "normative", "version": "0.3.0", "status": "draft", "reverse": false,
+      "text": { "en": "Developing my teaching practice with AI is recognised in appraisal or promotion.", "ar": "يُعترف بتطوير ممارستي التدريسية باستخدام الذكاء الاصطناعي في تقييم الأداء أو في الترقية." },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "Written to profile the normative pillar (Scott, 2014).", "ar": "صيغ لرصد الركيزة المعيارية (Scott، 2014)." } }, { "type": "study1", "ref": "DR2", "note": { "en": "Profiles institutional conditions alongside practice (Study 1 conclusion).", "ar": "يرصد الظروف المؤسسية إلى جانب الممارسة (خلاصة الدراسة 1)." } }],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "IC-N3", "pillar": "normative", "version": "0.3.0", "status": "draft", "reverse": false,
+      "text": { "en": "Staff have protected time to develop AI-related teaching.", "ar": "لدى أعضاء هيئة التدريس وقت مخصّص ومحمي لتطوير التدريس المرتبط بالذكاء الاصطناعي." },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "Written to profile the normative pillar (Scott, 2014).", "ar": "صيغ لرصد الركيزة المعيارية (Scott، 2014)." } }, { "type": "study1", "ref": "DR2", "note": { "en": "Profiles institutional conditions alongside practice (Study 1 conclusion).", "ar": "يرصد الظروف المؤسسية إلى جانب الممارسة (خلاصة الدراسة 1)." } }],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "IC-C1", "pillar": "cultural-cognitive", "version": "0.3.0", "status": "draft", "reverse": true,
+      "text": { "en": "In my department, students' use of AI is seen mainly as an academic-integrity problem.", "ar": "في قسمي، يُنظر إلى استخدام الطلاب للذكاء الاصطناعي أساسًا على أنه مشكلة تتعلق بالنزاهة الأكاديمية." },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "Written to profile the cultural-cognitive pillar (Scott, 2014). Reverse-scored.", "ar": "صيغ لرصد الركيزة الثقافية-المعرفية (Scott، 2014). يُصحَّح عكسيًا." } }, { "type": "study1", "ref": "DR2", "note": { "en": "Profiles institutional conditions alongside practice (Study 1 conclusion).", "ar": "يرصد الظروف المؤسسية إلى جانب الممارسة (خلاصة الدراسة 1)." } }],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "IC-C2", "pillar": "cultural-cognitive", "version": "0.3.0", "status": "draft", "reverse": true,
+      "text": { "en": "It is taken for granted here that keeping up with AI is students' business rather than staff's.", "ar": "من المُسلَّم به هنا أن مواكبة الذكاء الاصطناعي شأنٌ يخص الطلاب لا أعضاء هيئة التدريس." },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "Written to profile the cultural-cognitive pillar (Scott, 2014). Reverse-scored.", "ar": "صيغ لرصد الركيزة الثقافية-المعرفية (Scott، 2014). يُصحَّح عكسيًا." } }, { "type": "study1", "ref": "DR2", "note": { "en": "Profiles institutional conditions alongside practice (Study 1 conclusion).", "ar": "يرصد الظروف المؤسسية إلى جانب الممارسة (خلاصة الدراسة 1)." } }],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "IC-C3", "pillar": "cultural-cognitive", "version": "0.3.0", "status": "draft", "reverse": false,
+      "text": { "en": "Using AI critically is seen here as part of being a good clinical teacher.", "ar": "يُعدّ الاستخدام الناقد للذكاء الاصطناعي هنا جزءًا من كون المرء معلّمًا سريريًا جيدًا." },
+      "provenance": [{ "type": "theory", "ref": "Scott (2014)", "note": { "en": "Written to profile the cultural-cognitive pillar (Scott, 2014).", "ar": "صيغ لرصد الركيزة الثقافية-المعرفية (Scott، 2014)." } }, { "type": "study1", "ref": "DR2", "note": { "en": "Profiles institutional conditions alongside practice (Study 1 conclusion).", "ar": "يرصد الظروف المؤسسية إلى جانب الممارسة (خلاصة الدراسة 1)." } }],
+      "ar_status": "draft — needs human review"
+    }
+  ],
+  "decouplingProbe": {
+    "id": "IC-D1", "version": "0.3.0", "status": "draft", "reverse": false,
+    "text": { "en": "What our programme documents say about AI matches what actually happens in teaching.", "ar": "ما تذكره وثائق برنامجنا عن الذكاء الاصطناعي يطابق ما يحدث فعليًا في التدريس." },
+    "resultsText": {
+      "en": "This item asks whether documents and practice match. A low rating does not mean anyone is at fault: under accreditation pressure, documentation often moves faster than practice. It is a useful starting point for a conversation in your department.",
+      "ar": "يسأل هذا البند عمّا إذا كانت الوثائق تتطابق مع الممارسة. ولا يعني التقييم المنخفض أن أحدًا مقصّر؛ فتحت ضغط الاعتماد كثيرًا ما يسبق التوثيقُ الممارسة. وهو نقطة انطلاق مفيدة للحوار داخل قسمك."
+    },
+    "provenance": [
+      { "type": "theory", "ref": "Meyer and Rowan (1977)", "note": {
+        "en": "Probes the decoupling of formal structure from actual activity (Meyer and Rowan, 1977). Reported separately, not part of any pillar mean.",
+        "ar": "يستقصي الانفصال بين البنية الرسمية والنشاط الفعلي (Meyer وRowan، 1977). يُعرض منفصلًا ولا يدخل في متوسط أي ركيزة." } },
+      { "type": "study2", "ref": "DR7", "note": {
+        "en": "Design requirement DR7: the risk of ceremonial compliance under accreditation pressure (Study 2, Theme 2: documentation).",
+        "ar": "متطلب التصميم DR7: خطر الامتثال الشكلي تحت ضغط الاعتماد (الدراسة 2، المحور 2: التوثيق)." } }
+    ],
+    "ar_status": "draft — needs human review"
+  }
+}

@@ -33,6 +33,7 @@ export default function Home() {
             <div>
               <h2>{p.name[lang]}</h2>
               <p>{p.desc[lang]}</p>
+              {p.definitionStatus === "working" && <p className="working-def">{t.workingDefinition}</p>}
             </div>
           </div>
         ))}

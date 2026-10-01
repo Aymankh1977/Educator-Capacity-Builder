@@ -76,6 +76,7 @@ a { color: inherit; }
 .pillar-key { font-weight: 700; font-size: 2rem; line-height: 1; color: var(--c); min-width: 1.2em; }
 .pillar h2 { margin-bottom: 0.2em; }
 .pillar p { margin: 0; color: var(--muted); }
+.pillar .working-def { margin-top: 6px; font-size: 0.82rem; font-style: italic; }
 
 .steps { list-style: none; padding: 0; margin: 32px 0; counter-reset: step; display: grid; gap: 24px; }
 .steps li { counter-increment: step; padding-inline-start: 48px; position: relative; }

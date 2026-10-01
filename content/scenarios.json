@@ -1,0 +1,289 @@
+{
+  "version": "0.3.0",
+  "scenarios": [
+    {
+      "id": "reflections",
+      "version": "0.3.0",
+      "status": "draft",
+      "pillars": [
+        "R"
+      ],
+      "title": {
+        "en": "Case reflections that read too well",
+        "ar": "تأملات حالات تبدو مصقولة أكثر من اللازم"
+      },
+      "context": {
+        "en": "Fourth-year students submit written reflections on a periodontal patient they treated. Several are fluent but generic, with few details about the actual patient. You suspect AI drafting.",
+        "ar": "يقدّم طلاب السنة الرابعة تأملات مكتوبة عن مريض لثة عالجوه. كثير منها سلس لكنه عام، ويفتقر إلى تفاصيل عن المريض الفعلي. تشكّ في أنها صيغت بالذكاء الاصطناعي."
+      },
+      "options": [
+        {
+          "id": "a",
+          "fit": "weak",
+          "text": {
+            "en": "Run every reflection through an AI detector and penalise the flagged ones.",
+            "ar": "أمرّر كل التأملات عبر أداة كشف الذكاء الاصطناعي وأعاقب ما تُشير إليه."
+          },
+          "feedback": {
+            "en": "Detectors are unreliable and flag non-native English writers more often, so this risks unfair penalties without improving learning.",
+            "ar": "أدوات الكشف غير موثوقة، وتُشير إلى كتابات غير الناطقين بالإنجليزية أكثر من غيرهم، مما يعرّض الطلاب لعقوبات غير عادلة دون تحسين التعلّم."
+          }
+        },
+        {
+          "id": "b",
+          "fit": "strong",
+          "text": {
+            "en": "Hold a short conversation with each student about their clinical reasoning, and redesign the next brief to require patient-specific details and an AI-use statement.",
+            "ar": "أُجري حوارًا قصيرًا مع كل طالب حول استدلاله السريري، وأعيد تصميم التكليف القادم ليتطلب تفاصيل خاصة بالمريض وإفصاحًا عن استخدام الذكاء الاصطناعي."
+          },
+          "feedback": {
+            "en": "This checks the learning directly, keeps the task tied to the real patient, and makes AI use something to discuss rather than hide.",
+            "ar": "يتحقق هذا من التعلّم مباشرة، ويُبقي المهمة مرتبطة بالمريض الحقيقي، ويجعل استخدام الذكاء الاصطناعي قابلًا للنقاش بدل أن يكون خفيًا."
+          }
+        },
+        {
+          "id": "c",
+          "fit": "partial",
+          "text": {
+            "en": "Leave it. The reflections are formative, so they do not count.",
+            "ar": "أتجاهل الأمر، فالتأملات تكوينية ولا تُحتسب في الدرجات."
+          },
+          "feedback": {
+            "en": "Low stakes do not make the problem go away. If reflections no longer show reasoning, the task has stopped doing its job.",
+            "ar": "انخفاض أهمية الدرجة لا يُلغي المشكلة. إذا لم تعد التأملات تُظهر الاستدلال، فقد فقدت المهمة غايتها."
+          }
+        }
+      ],
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Researcher-constructed scenario, written for v1 of this studio.",
+            "ar": "سيناريو من إعداد الباحث، كُتب للإصدار الأول من الاستوديو."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Reflective Integration",
+          "note": {
+            "en": "Structured by the Reflective Integration pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «التكامل التأملي» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "feedback-tool",
+      "version": "0.3.0",
+      "status": "draft",
+      "pillars": [
+        "E"
+      ],
+      "title": {
+        "en": "An AI feedback tool that favours some writers",
+        "ar": "أداة تغذية راجعة تُفضّل بعض الكُتّاب"
+      },
+      "context": {
+        "en": "Your school piloted an AI tool that scores clinical case write-ups. Staff notice that students writing in English as a second language score consistently lower, even when their clinical content is sound.",
+        "ar": "جرّبت كليتك أداة ذكاء اصطناعي تُقيّم تقارير الحالات السريرية. يلاحظ الأعضاء أن الطلاب الذين يكتبون بالإنجليزية لغةً ثانية يحصلون على درجات أقل باستمرار، حتى عندما يكون محتواهم السريري سليمًا."
+      },
+      "options": [
+        {
+          "id": "a",
+          "fit": "weak",
+          "text": {
+            "en": "Keep the tool and advise students to improve their English.",
+            "ar": "أُبقي الأداة وأنصح الطلاب بتحسين لغتهم الإنجليزية."
+          },
+          "feedback": {
+            "en": "This treats a flaw in the tool as a flaw in the students and builds a language penalty into a clinical grade.",
+            "ar": "يعامل هذا خللًا في الأداة كأنه خلل في الطلاب، ويُدخل عقوبة لغوية في درجة سريرية."
+          }
+        },
+        {
+          "id": "b",
+          "fit": "partial",
+          "text": {
+            "en": "Withdraw the tool for everyone.",
+            "ar": "أسحب الأداة من الجميع."
+          },
+          "feedback": {
+            "en": "This removes the harm but also the benefit, and misses the chance to learn how the bias arises.",
+            "ar": "يزيل هذا الضرر لكنه يزيل الفائدة أيضًا، ويُفوّت فرصة فهم مصدر التحيّز."
+          }
+        },
+        {
+          "id": "c",
+          "fit": "strong",
+          "text": {
+            "en": "Compare a sample of tool scores with staff marks across language backgrounds, pause high-stakes use, and keep the tool for formative feedback until it is calibrated.",
+            "ar": "أقارن عيّنة من درجات الأداة بدرجات الأعضاء عبر الخلفيات اللغوية، وأوقف استخدامها في التقييم عالي المخاطر، وأُبقيها للتغذية الراجعة التكوينية حتى تتم معايرتها."
+          },
+          "feedback": {
+            "en": "This tests the bias with evidence, protects fairness in grading, and keeps what is useful about the tool.",
+            "ar": "يختبر هذا التحيّز بالأدلة، ويحمي عدالة التقييم، ويحافظ على الجوانب المفيدة في الأداة."
+          }
+        }
+      ],
+      "provenance": [
+        {
+          "type": "realai-paper",
+          "ref": "Equity by Design",
+          "note": {
+            "en": "Not directly evidenced in the Study 1 corpus; researcher-constructed from the REAL-AI framework.",
+            "ar": "لا تدعمه أدلة مباشرة في الدراسات المشمولة بالدراسة 1؛ أعدّه الباحث استنادًا إلى إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "radiograph",
+      "version": "0.3.0",
+      "status": "draft",
+      "pillars": [
+        "A"
+      ],
+      "title": {
+        "en": "The radiograph AI says caries",
+        "ar": "الذكاء الاصطناعي يشير إلى تسوّس في الصورة الشعاعية"
+      },
+      "context": {
+        "en": "In clinic, a student accepts an AI overlay flagging interproximal caries on a bitewing and plans a restoration. Your own reading suggests cervical burnout, not a lesion.",
+        "ar": "في العيادة، يقبل طالب إشارة طبقة الذكاء الاصطناعي إلى تسوّس بين سطحي في صورة مجنّحة، ويخطط لحشوة. قراءتك تشير إلى احتراق عنقي (cervical burnout) لا إلى آفة."
+      },
+      "options": [
+        {
+          "id": "a",
+          "fit": "strong",
+          "text": {
+            "en": "Ask the student to read the radiograph without the overlay, correlate with clinical examination, then discuss false positives and log the case for teaching.",
+            "ar": "أطلب من الطالب قراءة الصورة دون الطبقة، ومقارنتها بالفحص السريري، ثم نناقش النتائج الإيجابية الكاذبة ونوثّق الحالة لأغراض التدريس."
+          },
+          "feedback": {
+            "en": "Patient safety comes first, and the student practises the judgement that has to sit above the tool.",
+            "ar": "تأتي سلامة المريض أولًا، ويتدرّب الطالب على الحكم الذي يجب أن يعلو على الأداة."
+          }
+        },
+        {
+          "id": "b",
+          "fit": "partial",
+          "text": {
+            "en": "Correct the treatment plan yourself and move on.",
+            "ar": "أصحّح خطة العلاج بنفسي وأمضي."
+          },
+          "feedback": {
+            "en": "The patient is protected, but the student does not learn why the AI was wrong or how to check it next time.",
+            "ar": "يحمي هذا المريض، لكن الطالب لا يتعلّم سبب خطأ الذكاء الاصطناعي ولا كيف يتحقق منه لاحقًا."
+          }
+        },
+        {
+          "id": "c",
+          "fit": "weak",
+          "text": {
+            "en": "Go with the AI. The tool is approved by the school.",
+            "ar": "أعتمد على الذكاء الاصطناعي، فالأداة معتمدة من الكلية."
+          },
+          "feedback": {
+            "en": "Approval does not make an output correct. Deferring to it here risks unnecessary treatment.",
+            "ar": "الاعتماد لا يجعل المخرجات صحيحة، والانقياد لها هنا قد يؤدي إلى علاج غير ضروري."
+          }
+        }
+      ],
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Researcher-constructed scenario, written for v1 of this studio.",
+            "ar": "سيناريو من إعداد الباحث، كُتب للإصدار الأول من الاستوديو."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Authentic Clinical Alignment",
+          "note": {
+            "en": "Structured by the Authentic Clinical Alignment pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «المواءمة السريرية الأصيلة» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    },
+    {
+      "id": "module-policy",
+      "version": "0.3.0",
+      "status": "draft",
+      "pillars": [
+        "L"
+      ],
+      "title": {
+        "en": "Ban it or shape it?",
+        "ar": "المنع أم التوجيه؟"
+      },
+      "context": {
+        "en": "Colleagues propose banning generative AI in a second-year BDS module, with penalties for any use. You lead one of the module's assessments.",
+        "ar": "يقترح زملاؤك منع الذكاء الاصطناعي التوليدي في مقرر للسنة الثانية من برنامج طب الأسنان، مع عقوبات على أي استخدام. وأنت مسؤول عن أحد تقييمات المقرر."
+      },
+      "options": [
+        {
+          "id": "a",
+          "fit": "weak",
+          "text": {
+            "en": "Support the ban. It is the simplest rule to enforce.",
+            "ar": "أؤيد المنع، فهو أسهل قاعدة في التطبيق."
+          },
+          "feedback": {
+            "en": "Blanket bans are hard to enforce, push use out of sight, and leave students without guidance they will need in practice.",
+            "ar": "المنع الشامل صعب التطبيق، ويدفع الاستخدام إلى الخفاء، ويترك الطلاب دون توجيه سيحتاجونه في الممارسة."
+          }
+        },
+        {
+          "id": "b",
+          "fit": "strong",
+          "text": {
+            "en": "Draft task-by-task guidance with student representatives: allowed, allowed with declaration, or not allowed. Review it each term.",
+            "ar": "أعدّ مع ممثلي الطلاب إرشادات لكل مهمة: مسموح، أو مسموح مع الإفصاح، أو غير مسموح، وأراجعها كل فصل دراسي."
+          },
+          "feedback": {
+            "en": "Students share ownership of the rules, expectations are clear for each task, and the policy can change as the tools do.",
+            "ar": "يشارك الطلاب في ملكية القواعد، وتتضح التوقعات لكل مهمة، ويمكن تحديث السياسة مع تطوّر الأدوات."
+          }
+        },
+        {
+          "id": "c",
+          "fit": "weak",
+          "text": {
+            "en": "Allow any use and leave it to students' judgement.",
+            "ar": "أسمح بأي استخدام وأترك الأمر لتقدير الطلاب."
+          },
+          "feedback": {
+            "en": "Without shared expectations, students guess at the rules and assessment validity is left to chance.",
+            "ar": "دون توقعات مشتركة، يخمّن الطلاب القواعد، ويُترك صدق التقييم للصدفة."
+          }
+        }
+      ],
+      "provenance": [
+        {
+          "type": "researcher-constructed",
+          "ref": "v1",
+          "note": {
+            "en": "Researcher-constructed scenario, written for v1 of this studio.",
+            "ar": "سيناريو من إعداد الباحث، كُتب للإصدار الأول من الاستوديو."
+          }
+        },
+        {
+          "type": "realai-paper",
+          "ref": "Learning-Centred Partnership",
+          "note": {
+            "en": "Structured by the Learning-Centred Partnership pillar of the REAL-AI framework.",
+            "ar": "مبني على ركيزة «الشراكة المتمحورة حول التعلّم» في إطار REAL-AI."
+          }
+        }
+      ],
+      "ar_status": "draft — needs human review"
+    }
+  ]
+}
