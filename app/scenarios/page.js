@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import { useLang } from "@/components/LangProvider";
 import CoachBox from "@/components/CoachBox";
+import WhyThis from "@/components/WhyThis";
 import { SCENARIOS, pillarByKey } from "@/lib/realai";
 import { addEntry, updateEntry } from "@/lib/journal";
 
@@ -68,6 +69,7 @@ export default function Scenarios() {
       <p className="pillar-line"><span className="tag" dir="ltr">{p.key}</span> {p.name[lang]}</p>
       <h1>{sc.title[lang]}</h1>
       <p className="context">{sc.context[lang]}</p>
+      <WhyThis objects={sc} />
 
       <h2>{t.whatWouldYouDo}</h2>
       <div className="options" role="radiogroup">

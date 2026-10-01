@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useLang } from "@/components/LangProvider";
 import RealMark from "@/components/RealMark";
 import CoachBox from "@/components/CoachBox";
+import WhyThis from "@/components/WhyThis";
 import { ITEMS, PILLARS, pillarMeans, toPct } from "@/lib/realai";
 import { addEntry } from "@/lib/journal";
 
@@ -107,6 +108,7 @@ export default function Readiness() {
       {PILLARS.map((p) => (
         <div key={p.key} className="item-group" style={{ "--c": p.color }}>
           <h2><span dir="ltr" className="tag">{p.key}</span> {p.name[lang]}</h2>
+          <WhyThis objects={ITEMS.filter((i) => i.pillar === p.key)} />
           {ITEMS.filter((i) => i.pillar === p.key).map((item) => (
             <fieldset key={item.id} className="item">
               <legend>{item[lang]}</legend>
